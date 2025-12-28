@@ -126,10 +126,6 @@ function Dashboard() {
                         <h2 className="text-lg font-bold text-gray-500 dark:text-gray-400 hidden sm:block">Petugas</h2>
                     </div>
                     <div className="flex items-center gap-4">
-                        <a href="http://localhost:3000" className="hidden sm:flex items-center gap-2 text-sm font-bold text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
-                            <span className="material-symbols-outlined">grid_view</span>
-                            Portal
-                        </a>
                         <button
                             onClick={handleNotifClick}
                             className="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300 transition-colors relative"
