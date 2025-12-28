@@ -30,15 +30,16 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 }
 
 function AppRoutes() {
+  // Demo mode: bypass authentication for frontend-only deployment
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-      <Route path="/create-report" element={<ProtectedRoute><CreateReport /></ProtectedRoute>} />
-      <Route path="/all-collections" element={<ProtectedRoute><AllCollections /></ProtectedRoute>} />
-      <Route path="/new-audit" element={<ProtectedRoute><NewAudit /></ProtectedRoute>} />
-      <Route path="/detailed-statistics" element={<ProtectedRoute><DetailedStatistics /></ProtectedRoute>} />
-      <Route path="/report-access" element={<ProtectedRoute><ReportAccess /></ProtectedRoute>} />
+      <Route path="/login" element={<Navigate to="/" replace />} />
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/create-report" element={<CreateReport />} />
+      <Route path="/all-collections" element={<AllCollections />} />
+      <Route path="/new-audit" element={<NewAudit />} />
+      <Route path="/detailed-statistics" element={<DetailedStatistics />} />
+      <Route path="/report-access" element={<ReportAccess />} />
     </Routes>
   );
 }

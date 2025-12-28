@@ -64,7 +64,7 @@ function App() {
               <div className="flex flex-col gap-8">
                 <h3 className="text-lg font-bold text-[#111814] dark:text-white border-b pb-2 border-gray-100 dark:border-gray-700">Apakah kamu?</h3>
                 <div className="grid gap-4">
-                  <a href="/citizen" className="group flex items-center p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#102218] hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-left">
+                  <a href="https://simbiosis-eight.vercel.app/" className="group flex items-center p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#102218] hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-left">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-gray-800 text-[#111814] dark:text-white group-hover:bg-primary group-hover:text-[#111814] transition-colors">
                       <span className="material-symbols-outlined">person</span>
                     </div>
@@ -74,7 +74,7 @@ function App() {
                     </div>
                     <span className="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
                   </a>
-                  <a href="/workforce" className="group flex items-center p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#102218] hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-left">
+                  <a href="https://simbiosis-workforce-app.vercel.app/" className="group flex items-center p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#102218] hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-left">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-gray-800 text-[#111814] dark:text-white group-hover:bg-primary group-hover:text-[#111814] transition-colors">
                       <span className="material-symbols-outlined">local_shipping</span>
                     </div>
@@ -84,7 +84,7 @@ function App() {
                     </div>
                     <span className="material-symbols-outlined text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all">arrow_forward</span>
                   </a>
-                  <a href="/admin" className="group flex items-center p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#102218] hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-left">
+                  <a href="https://simbiosis-admin-dashboard.vercel.app/" className="group flex items-center p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#102218] hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300 text-left">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-background-light dark:bg-gray-800 text-[#111814] dark:text-white group-hover:bg-primary group-hover:text-[#111814] transition-colors">
                       <span className="material-symbols-outlined">security</span>
                     </div>

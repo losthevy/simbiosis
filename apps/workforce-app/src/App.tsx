@@ -30,15 +30,16 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
 }
 
 function AppRoutes() {
+  // Demo mode: bypass authentication for frontend-only deployment
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-      <Route path="/scan" element={<ProtectedRoute><Scanner /></ProtectedRoute>} />
-      <Route path="/verification" element={<ProtectedRoute><Verification /></ProtectedRoute>} />
-      <Route path="/traffic" element={<ProtectedRoute><TrafficDetail /></ProtectedRoute>} />
-      <Route path="/heatmap" element={<ProtectedRoute><HeatmapDetail /></ProtectedRoute>} />
-      <Route path="/navigation" element={<ProtectedRoute><NavigationDetail /></ProtectedRoute>} />
+      <Route path="/login" element={<Navigate to="/" replace />} />
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/scan" element={<Scanner />} />
+      <Route path="/verification" element={<Verification />} />
+      <Route path="/traffic" element={<TrafficDetail />} />
+      <Route path="/heatmap" element={<HeatmapDetail />} />
+      <Route path="/navigation" element={<NavigationDetail />} />
     </Routes>
   );
 }
