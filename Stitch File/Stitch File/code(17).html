@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simbiosis - Detail Tantangan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "primary-hover": "#0fd460",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2e24",
+                        "text-main": "#111814",
+                        "text-muted": "#618972",
+                        "border-light": "#dbe6e0",
+                        "border-dark": "#2a4034",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<div class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="flex items-center justify-between h-20 px-6 lg:px-10 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark flex-shrink-0 z-10">
+<div class="flex items-center gap-6">
+<h1 class="text-text-main dark:text-white text-2xl font-black tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">recycling</span>
+                SIMBIOSIS
+            </h1>
+<div class="h-8 w-px bg-border-light dark:bg-border-dark hidden sm:block"></div>
+<h2 class="text-lg font-bold text-text-muted hidden sm:block">Dasbor Warga</h2>
+</div>
+<div class="flex items-center flex-1 justify-end gap-4 sm:gap-6">
+<div class="hidden md:flex w-full max-w-md items-center h-12 rounded-xl bg-background-light dark:bg-background-dark border border-transparent focus-within:border-primary px-4 transition-all">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-text-main dark:text-white placeholder:text-text-muted" placeholder="Cari aktivitas, tantangan, atau teman..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2.5 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<div class="h-11 w-11 rounded-full bg-cover bg-center border-2 border-primary cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all" data-alt="Portrait of the user Alex" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2wtAaXqs2ceTwHc6jszwIHhy7Z0wfQNBoiuc1xZ0fM_lYEBDzVxxPKxTEjwK8_39fcQ3m150ZMJp-BW9mTg_GFsITX97ziXYmx7LAICcP2yOsJbnp-dll2qgqNb4Fpfhf412JSeiIpiS16ceJ7nEdcCLGzfXbi8hCn7APC-5etXdBgZqTQEbYOuwryuGaDcmQ5IWrplejkFBOp254eghKhk4OTNnQp2QDD5baxtY2MyUYozP8I6QtDR3StyfqudztgyMqS4azBv8');"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-6 lg:p-10 scroll-smooth">
+<div class="max-w-5xl mx-auto flex flex-col gap-8">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 text-text-muted hover:text-primary transition-colors font-bold group">
+<span class="material-symbols-outlined group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                        Kembali ke Dasbor
+                    </button>
+<div class="h-1 w-1 rounded-full bg-border-dark dark:bg-border-light/20"></div>
+<span class="text-text-muted text-sm">Detail Tantangan</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 flex flex-col gap-8">
+<div class="flex flex-col gap-6">
+<div class="h-64 md:h-80 w-full rounded-2xl bg-cover bg-center relative shadow-sm overflow-hidden group" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJIW6IVbveS8pgjS0FPJUoHWkGIEj7GrwgHbE-0-KDxtqa23h-u2qGHyZpMQqq1TM7L5Onrzz_0YO9QQIoyPRj3pJNm_OkoHuZBtbmDmyW0J3FJx_gXWOpi6SCq2JDNAx1J1NtqxVp_TRLElEBtJpKG6fLKVWv4wRccYpr5iztJm69sU0C0qrpjZMRlnFp2LHEzFyYU1L4lxuPlG8oiZ8pYA_foozAoGlICQ8qb_HvvNlFEO0CvSZ4V5vpxDt3uK5rrMjzo2vMSeg');">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80"></div>
+<div class="absolute top-4 left-4 bg-primary text-text-main font-bold px-3 py-1.5 rounded-lg text-sm shadow-md">
+                                    Tantangan Komunitas
+                                </div>
+<div class="absolute bottom-6 left-6 right-6">
+<h1 class="text-3xl md:text-4xl font-black text-white tracking-tight mb-2 drop-shadow-sm">Minggu Bebas Plastik</h1>
+</div>
+</div>
+<div class="flex flex-wrap gap-x-6 gap-y-3 text-sm text-text-muted font-medium items-center px-2">
+<span class="flex items-center gap-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined text-primary text-xl">calendar_today</span> 
+                                    7 Hari
+                                </span>
+<span class="hidden sm:block w-1 h-1 rounded-full bg-border-dark dark:bg-border-light/30"></span>
+<span class="flex items-center gap-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined text-primary text-xl">group</span> 
+                                    1.245 Peserta
+                                </span>
+<span class="hidden sm:block w-1 h-1 rounded-full bg-border-dark dark:bg-border-light/30"></span>
+<span class="flex items-center gap-2 text-text-main dark:text-white">
+<span class="material-symbols-outlined text-primary text-xl">eco</span> 
+                                    Kategori: Lingkungan
+                                </span>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 lg:p-8 border border-border-light dark:border-border-dark">
+<h3 class="text-xl font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+                                Tentang Tantangan
+                            </h3>
+<div class="prose dark:prose-invert text-text-muted max-w-none space-y-4 leading-relaxed">
+<p>
+                                    Plastik sekali pakai telah menjadi masalah utama bagi lingkungan kita. Tantangan "Minggu Bebas Plastik" mengajak Anda untuk berkomitmen mengurangi konsumsi plastik sekali pakai selama satu minggu penuh.
+                                </p>
+<p>
+                                    Mulai dari menolak kantong plastik saat berbelanja, membawa botol minum sendiri, hingga menghindari sedotan plastik. Tujuannya adalah membangun kebiasaan baru yang lebih sadar lingkungan dan memahami dampak kecil yang kita buat setiap hari.
+                                </p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 lg:p-8 border border-border-light dark:border-border-dark">
+<h3 class="text-xl font-bold text-text-main dark:text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">rule</span>
+                                Aturan &amp; Objektif
+                            </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark/50 border border-transparent hover:border-primary/30 transition-colors">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-text-main dark:text-white text-sm">Bawa Tas Belanja Sendiri</h4>
+<p class="text-sm text-text-muted mt-0.5">Selalu bawa tas guna ulang (tote bag) saat ke minimarket atau pasar.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark/50 border border-transparent hover:border-primary/30 transition-colors">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-text-main dark:text-white text-sm">Gunakan Tumbler</h4>
+<p class="text-sm text-text-muted mt-0.5">Hindari membeli air kemasan botol plastik, gunakan botol isi ulang.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark/50 border border-transparent hover:border-primary/30 transition-colors">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-text-main dark:text-white text-sm">Tanpa Sedotan Plastik</h4>
+<p class="text-sm text-text-muted mt-0.5">Tolak sedotan plastik saat memesan minuman di restoran atau kafe.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark/50 border border-transparent hover:border-primary/30 transition-colors">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-text-main dark:text-white text-sm">Dokumentasi Harian</h4>
+<p class="text-sm text-text-muted mt-0.5">Unggah foto aksi bebas plastikmu setiap hari untuk validasi.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-xl font-bold text-text-main dark:text-white px-2">Tips Sukses</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-5 rounded-2xl bg-blue-50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-800/30 flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="p-2 bg-blue-100 dark:bg-blue-800/30 rounded-lg text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white text-sm">Siapkan "Kit" Darurat</h4>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">Simpan tas lipat kecil di tas kerja, mobil, atau jok motor agar selalu siap saat mendadak belanja.</p>
+</div>
+</div>
+<div class="p-5 rounded-2xl bg-orange-50 dark:bg-orange-900/10 border border-orange-100 dark:border-orange-800/30 flex items-start gap-4 hover:shadow-md transition-shadow">
+<div class="p-2 bg-orange-100 dark:bg-orange-800/30 rounded-lg text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined">local_cafe</span>
+</div>
+<div>
+<h4 class="font-bold text-text-main dark:text-white text-sm">Diskon Tumbler</h4>
+<p class="text-xs text-text-muted mt-1 leading-relaxed">Banyak kedai kopi memberikan diskon khusus jika Anda membawa tumbler sendiri. Hemat uang &amp; plastik!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-6 lg:sticky lg:top-6">
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark shadow-lg shadow-primary/5 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-text-main dark:text-white text-lg">Progres Anda</h3>
+<div class="flex items-center gap-1.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-2.5 py-1 rounded-full text-xs font-bold border border-green-200 dark:border-green-800">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                            Sedang Berjalan
+                        </div>
+</div>
+<div class="flex items-baseline gap-1.5 mb-2">
+<span class="text-5xl font-black text-text-main dark:text-white tracking-tight">2</span>
+<span class="text-text-muted font-medium">/ 7 Hari</span>
+</div>
+<div class="w-full bg-background-light dark:bg-background-dark rounded-full h-4 overflow-hidden border border-border-light dark:border-border-dark mb-8 relative">
+<div class="bg-primary h-full rounded-full shadow-[0_0_15px_rgba(19,236,109,0.4)] relative" style="width: 28%">
+<div class="absolute top-0 right-0 bottom-0 w-1 bg-white/30"></div>
+</div>
+</div>
+<button class="w-full bg-primary text-text-main font-bold py-4 px-6 rounded-xl hover:bg-primary-hover transition-all transform hover:-translate-y-0.5 shadow-lg shadow-primary/20 mb-3 flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">edit_square</span>
+                        Lapor Progres Hari Ini
+                    </button>
+<button class="w-full bg-transparent text-text-muted font-bold py-3 px-6 rounded-xl hover:bg-background-light dark:hover:bg-background-dark transition-colors text-sm border border-transparent hover:border-border-light dark:hover:border-border-dark">
+                        Lihat Riwayat Laporan
+                    </button>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 border border-border-light dark:border-border-dark">
+<h3 class="font-bold text-text-main dark:text-white mb-5 flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-500">emoji_events</span>
+                        Hadiah Menanti
+                    </h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<div class="h-12 w-12 rounded-full bg-yellow-100 dark:bg-yellow-900/20 flex items-center justify-center text-yellow-600 dark:text-yellow-500 shadow-sm border border-yellow-200 dark:border-yellow-800/30">
+<span class="material-symbols-outlined">stars</span>
+</div>
+<div>
+<p class="font-bold text-text-main dark:text-white text-base">300 EcoPoin</p>
+<p class="text-xs text-text-muted">Dapat ditukar di marketplace</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<div class="h-12 w-12 rounded-full bg-purple-100 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400 shadow-sm border border-purple-200 dark:border-purple-800/30">
+<span class="material-symbols-outlined">military_tech</span>
+</div>
+<div>
+<p class="font-bold text-text-main dark:text-white text-base">Lencana Pahlawan</p>
+<p class="text-xs text-text-muted">Badge eksklusif di profilmu</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-[#0c3925] to-background-dark rounded-2xl p-6 text-white relative overflow-hidden shadow-md">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+<h3 class="font-bold text-white mb-2 relative z-10 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">public</span>
+                        Dampak Kolektif
+                    </h3>
+<p class="text-green-100/80 text-sm mb-6 relative z-10 leading-relaxed">
+                        Jika kamu menyelesaikan tantangan ini, kamu berpotensi menyelamatkan lingkungan dari:
+                    </p>
+<div class="grid grid-cols-2 gap-3 relative z-10">
+<div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/5 hover:bg-white/15 transition-colors text-center">
+<span class="material-symbols-outlined text-green-300 text-2xl mb-1">water_bottle</span>
+<span class="block text-2xl font-black mt-1">14</span>
+<span class="text-xs text-green-200 font-medium">Botol Plastik</span>
+</div>
+<div class="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/5 hover:bg-white/15 transition-colors text-center">
+<span class="material-symbols-outlined text-green-300 text-2xl mb-1">shopping_bag</span>
+<span class="block text-2xl font-black mt-1">21+</span>
+<span class="text-xs text-green-200 font-medium">Kantong Kresek</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

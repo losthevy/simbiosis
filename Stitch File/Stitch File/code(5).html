@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detail Lalu Lintas - SIMBIOSIS Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111814] dark:text-white font-display transition-colors duration-200">
+<div class="flex h-screen w-full overflow-hidden">
+<main class="flex-1 flex flex-col h-full overflow-hidden relative w-full">
+<header class="h-16 flex items-center justify-between px-6 border-b border-[#f0f4f2] dark:border-[#2a3c30] bg-surface-light dark:bg-surface-dark shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined text-xl">recycling</span>
+</div>
+<div>
+<h1 class="text-lg font-bold tracking-tight leading-none">SIMBIOSIS</h1>
+</div>
+</div>
+<div class="h-6 w-px bg-gray-200 dark:bg-gray-700 mx-1 hidden sm:block"></div>
+<h2 class="text-lg font-medium text-gray-500 dark:text-gray-400 hidden sm:block">Admin Logistik</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-surface-dark"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-[#f0f4f2] dark:border-[#2a3c30]">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold leading-tight">Budi Santoso</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">ID: #WF-8821</p>
+</div>
+<div class="size-9 rounded-full bg-gray-200 dark:bg-gray-700 bg-center bg-cover border-2 border-primary" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnEKdrBPJsUzMKI6VSEqP1gSDJ3GqIFmNMY3M_yRV8WNlaq_LDoBX3KOqyqVeJwvxNie52xIt594WxeLF_th6A6f_Rr8NIMq4QIXunyb3cJCWLpKVkwLdsKYpaJruO22AtUup8f-qb4LxtaEzyDFMbJkASeiXYDP7Iqd8nzoH-BRlAHOlensswO_yOqV-HOJP5KUd_6ZBhPUwMpMG7O3iWDfTBOSZy1doFp63YxvF2kwN5erxKdKDTjOQdw3ZGxowImonNKA726i8');">
+</div>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-4 md:p-8 space-y-6 bg-background-light dark:bg-background-dark">
+<div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+<div class="flex flex-col gap-2 w-full lg:w-auto">
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-1">
+<span>Dashboard</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-medium">Lalu Lintas</span>
+</div>
+<h1 class="text-3xl font-black tracking-tight text-[#111814] dark:text-white flex items-center gap-3">
+                        Detail Lalu Lintas
+                        <span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+</span>
+</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base max-w-2xl">
+                        Pantau kondisi lalu lintas real-time, identifikasi titik kemacetan, dan optimalkan rute pengangkutan sampah.
+                    </p>
+</div>
+<div class="flex flex-wrap items-center gap-3 bg-surface-light dark:bg-surface-dark p-3 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] shadow-sm w-full lg:w-auto">
+<div class="flex items-center gap-2 px-2 border-r border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-gray-400">filter_alt</span>
+<span class="text-sm font-bold text-gray-700 dark:text-gray-200">Filter:</span>
+</div>
+<select class="bg-gray-50 dark:bg-[#25382e] border-0 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-primary py-2 pl-3 pr-8 cursor-pointer">
+<option>Waktu: Saat Ini</option>
+<option>Pagi (06:00 - 10:00)</option>
+<option>Siang (10:00 - 14:00)</option>
+<option>Sore (14:00 - 18:00)</option>
+</select>
+<select class="bg-gray-50 dark:bg-[#25382e] border-0 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-primary py-2 pl-3 pr-8 cursor-pointer">
+<option>Hari: Senin</option>
+<option>Hari: Selasa</option>
+<option>Hari: Rabu</option>
+<option>Hari: Kamis</option>
+<option>Hari: Jumat</option>
+</select>
+<select class="bg-gray-50 dark:bg-[#25382e] border-0 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-primary py-2 pl-3 pr-8 cursor-pointer">
+<option>Area: Semua Zona</option>
+<option>Jakarta Utara</option>
+<option>Jakarta Selatan</option>
+<option>Jakarta Pusat</option>
+</select>
+<button class="bg-primary hover:brightness-105 text-background-dark p-2 rounded-lg transition-all shadow-sm">
+<span class="material-symbols-outlined">refresh</span>
+</button>
+</div>
+</div>
+<div class="relative w-full h-[500px] bg-gray-200 dark:bg-gray-800 rounded-2xl overflow-hidden border border-[#f0f4f2] dark:border-[#2a3c30] shadow-md group">
+<div class="absolute inset-0 bg-cover bg-center grayscale-[20%] contrast-[1.1]" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsb6VN2FFSp-UZxWjIg-PcM5u8-fSl8olc5ShdH3B6erXu246j4_EQJo_t0T_IuqBx4FZIM_B3vTlkZZyTiDUoPzRFOspuzE3-jx-7SNMfr5OJtWpIGt2BRK1PiYdIkJmdXLgzZEskXJN80vxjc74AiFh4z7o-xSldCus2cJntnFuenRFptrl7w8S-7FEVIq9lKruTpvK_ZPHvxbp9QvAdIyZyvhaKc4v1_qeCQBELCcZ7hkdL16g6nTJvZvUIY6JmmxRCv6euKGk');"></div>
+<div class="absolute inset-0 bg-surface-light/10 dark:bg-surface-dark/30 backdrop-contrast-125"></div>
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<path class="opacity-80 drop-shadow-lg" d="M 100 450 Q 200 400 300 420 T 500 350 T 700 400" fill="none" stroke="#13ec6d" stroke-dasharray="10 5" stroke-linecap="round" stroke-width="6"></path>
+<path class="opacity-80 drop-shadow-lg" d="M 500 350 Q 600 250 550 150 T 400 100" fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-width="6"></path>
+<path class="opacity-90 drop-shadow-xl" d="M 400 100 Q 300 150 200 120 T 100 200" fill="none" stroke="#ef4444" stroke-linecap="round" stroke-width="8"></path>
+</svg>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<div class="bg-surface-light dark:bg-surface-dark p-1 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700">
+<button class="w-full text-left px-3 py-1.5 text-xs font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-[#25382e] rounded flex items-center gap-2">
+<span class="size-2 rounded-full bg-red-500"></span> Macet (&gt;20 min)
+                        </button>
+<button class="w-full text-left px-3 py-1.5 text-xs font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-[#25382e] rounded flex items-center gap-2">
+<span class="size-2 rounded-full bg-yellow-500"></span> Padat (5-20 min)
+                        </button>
+<button class="w-full text-left px-3 py-1.5 text-xs font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-[#25382e] rounded flex items-center gap-2">
+<span class="size-2 rounded-full bg-primary"></span> Lancar (&lt;5 min)
+                        </button>
+</div>
+</div>
+<div class="absolute bottom-6 right-6 flex flex-col gap-2">
+<button class="bg-surface-light dark:bg-surface-dark p-2 rounded-lg shadow-lg hover:bg-gray-50 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-surface-light dark:bg-surface-dark p-2 rounded-lg shadow-lg hover:bg-gray-50 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="bg-surface-light dark:bg-surface-dark p-2 rounded-lg shadow-lg hover:bg-gray-50 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300 mt-2">
+<span class="material-symbols-outlined">layers</span>
+</button>
+</div>
+<div class="absolute top-[20%] left-[25%] group cursor-pointer">
+<div class="absolute -top-12 -left-16 w-40 bg-surface-light dark:bg-surface-dark p-2 rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity z-10 text-xs pointer-events-none">
+<p class="font-bold text-red-600">Kecelakaan Beruntun</p>
+<p class="text-gray-500">Est. Delay: 45 min</p>
+</div>
+<div class="size-8 bg-red-500 rounded-full border-2 border-white dark:border-gray-900 shadow-lg flex items-center justify-center animate-bounce">
+<span class="material-symbols-outlined text-white text-sm">priority_high</span>
+</div>
+<div class="absolute top-0 left-0 size-8 bg-red-500 rounded-full animate-ping opacity-50"></div>
+</div>
+<div class="absolute top-[35%] right-[40%] group cursor-pointer">
+<div class="absolute -top-12 -left-16 w-40 bg-surface-light dark:bg-surface-dark p-2 rounded shadow-xl opacity-0 group-hover:opacity-100 transition-opacity z-10 text-xs pointer-events-none">
+<p class="font-bold text-yellow-600">Perbaikan Jalan</p>
+<p class="text-gray-500">Est. Delay: 15 min</p>
+</div>
+<div class="size-8 bg-yellow-500 rounded-full border-2 border-white dark:border-gray-900 shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">construction</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+<div class="xl:col-span-7 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold text-[#111814] dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-red-500">report_problem</span>
+                            Laporan Kemacetan
+                        </h3>
+<button class="text-sm font-semibold text-primary hover:underline">Lihat Semua Laporan</button>
+</div>
+<div class="space-y-3">
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-red-500 shadow-sm flex flex-col sm:flex-row gap-4 items-start relative hover:bg-gray-50 dark:hover:bg-[#203228] transition-colors">
+<div class="absolute top-4 right-4 text-xs font-bold text-red-500 bg-red-50 dark:bg-red-900/20 px-2 py-1 rounded border border-red-100 dark:border-red-900/30">
+                                KRITIS
+                            </div>
+<div class="size-12 rounded-lg bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400 shrink-0">
+<span class="material-symbols-outlined">car_crash</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-lg text-[#111814] dark:text-white">Kecelakaan di Jl. Jend. Sudirman</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1 mb-2">
+<span class="material-symbols-outlined text-sm align-text-bottom">location_on</span>
+                                    Dekat Patung Pemuda (Arah Utara)
+                                </p>
+<div class="bg-gray-50 dark:bg-black/20 p-3 rounded-lg border border-dashed border-gray-200 dark:border-gray-700">
+<p class="text-xs font-bold text-gray-500 uppercase mb-1">Saran Rute Alternatif</p>
+<div class="flex items-center gap-2 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+                                        Alihkan via Jl. KH Mas Mansyur (+2.5 km)
+                                    </div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-yellow-500 shadow-sm flex flex-col sm:flex-row gap-4 items-start relative hover:bg-gray-50 dark:hover:bg-[#203228] transition-colors">
+<div class="absolute top-4 right-4 text-xs font-bold text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 px-2 py-1 rounded border border-yellow-100 dark:border-yellow-900/30">
+                                SEDANG
+                            </div>
+<div class="size-12 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600 dark:text-yellow-400 shrink-0">
+<span class="material-symbols-outlined">construction</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-lg text-[#111814] dark:text-white">Perbaikan Jalan Gatot Subroto</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1 mb-2">
+<span class="material-symbols-outlined text-sm align-text-bottom">location_on</span>
+                                    Depan Balai Kartini (Penyempitan Lajur)
+                                </p>
+<div class="bg-gray-50 dark:bg-black/20 p-3 rounded-lg border border-dashed border-gray-200 dark:border-gray-700">
+<p class="text-xs font-bold text-gray-500 uppercase mb-1">Saran Rute Alternatif</p>
+<div class="flex items-center gap-2 text-sm font-medium text-primary">
+<span class="material-symbols-outlined text-lg">alt_route</span>
+                                        Gunakan Jalur Tol Dalam Kota (Gate Kuningan)
+                                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="xl:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] shadow-sm">
+<h3 class="text-lg font-bold text-[#111814] dark:text-white mb-4">Dampak Lalu Lintas pada Rute</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-red-600 dark:text-red-400 uppercase tracking-wide">Terlambat Parah</span>
+<span class="font-bold text-base mt-0.5">Rute Utara A-04</span>
+</div>
+<div class="text-right">
+<span class="block text-2xl font-black text-red-600 dark:text-red-400">+45m</span>
+<span class="text-xs text-gray-500">Estimasi Delay</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-100 dark:border-yellow-900/30">
+<div class="flex flex-col">
+<span class="text-xs font-bold text-yellow-600 dark:text-yellow-400 uppercase tracking-wide">Waspada</span>
+<span class="font-bold text-base mt-0.5">Rute Pusat C-02</span>
+</div>
+<div class="text-right">
+<span class="block text-2xl font-black text-yellow-600 dark:text-yellow-400">+15m</span>
+<span class="text-xs text-gray-500">Estimasi Delay</span>
+</div>
+</div>
+<div class="mt-2 pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-between items-center text-sm">
+<span class="text-gray-500">Total armada terdampak:</span>
+<span class="font-bold text-[#111814] dark:text-white">5 Armada</span>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-6 rounded-xl shadow-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 p-3 opacity-10">
+<span class="material-symbols-outlined text-9xl">analytics</span>
+</div>
+<h3 class="text-lg font-bold mb-1 relative z-10">Analisis &amp; Optimasi</h3>
+<p class="text-gray-300 text-sm mb-6 relative z-10">Perbarui rute secara otomatis untuk menghindari titik macet dan menghemat waktu operasional.</p>
+<div class="grid grid-cols-2 gap-3 relative z-10">
+<button class="bg-primary hover:bg-[#0fb855] text-background-dark py-3 px-4 rounded-lg font-bold text-sm flex flex-col items-center justify-center gap-2 transition-all shadow-lg hover:shadow-primary/30">
+<span class="material-symbols-outlined">route</span>
+                                Optimasi Rute
+                            </button>
+<button class="bg-white/10 hover:bg-white/20 text-white py-3 px-4 rounded-lg font-bold text-sm flex flex-col items-center justify-center gap-2 transition-all border border-white/10">
+<span class="material-symbols-outlined">download</span>
+                                Unduh Laporan
+                            </button>
+</div>
+<div class="mt-4 flex items-center gap-2 text-xs text-gray-400 relative z-10">
+<span class="material-symbols-outlined text-sm">info</span>
+<span>Data diperbarui 2 menit yang lalu</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detail Buat Laporan</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "primary-dark": "#0eb553",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2e24",
+                        "text-main": "#111814",
+                        "text-muted": "#618972",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display overflow-hidden h-screen flex">
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden bg-background-light dark:bg-background-dark">
+<header class="h-16 flex items-center justify-between px-8 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 flex-shrink-0 z-10">
+<h2 class="text-xl font-bold tracking-tight text-text-main dark:text-white">Pusat Laporan</h2>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-gray-100 dark:bg-white/5 rounded-lg px-3 h-10 w-64 border border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 text-text-main dark:text-white placeholder-text-muted" placeholder="Cari laporan..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="h-10 w-10 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-text-main dark:text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-red-500 border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="h-8 w-px bg-gray-200 dark:bg-gray-700 mx-1"></div>
+<button class="flex items-center gap-3 pl-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="h-9 w-9 rounded-full bg-center bg-cover border border-gray-200 dark:border-gray-700" data-alt="Admin user profile picture showing a smiling man" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLo4NrYcGtlGXTWKt6PV-23GwlEIpEH3Y8v7n_qoE0Lj_p-DUQfYl_Q4kKsLVHJjEC7Jdoju6WxSX5XKUY-XkFQnWd9vjpGmDwpTXbfuxUjN1SZXcSEZ2fooxKX9krVtiB41-Cv6SlxBqNoWl0mDJIzXLYZTbqktnLyEEmZNwdvSeJQbev4IQE-vVzzXm1bf1Xy0vsYSQsUCB-_-ywiUHAyAj8_-D4DPo5R5HW6eaIAdBt_fJ4mlke-3UNFbVnT4MVw213ARnJTCw');">
+</div>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8">
+<div class="max-w-6xl mx-auto space-y-8">
+<div class="flex items-center gap-4">
+<button class="h-10 w-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div>
+<h1 class="text-2xl font-bold text-text-main dark:text-white">Buat Laporan Baru</h1>
+<p class="text-text-muted text-sm mt-1">Sesuaikan parameter untuk menghasilkan dan mengunduh data analitik terperinci.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-6">
+<section class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50 shadow-sm">
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+                                Pilih Jenis Laporan
+                            </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="report_type" type="radio"/>
+<div class="p-4 rounded-lg border-2 border-transparent hover:border-primary/30 dark:hover:border-primary/30 peer-checked:border-primary bg-gray-50 dark:bg-black/20 peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10 transition-all flex flex-col gap-3 h-full">
+<div class="p-2 bg-white dark:bg-surface-dark w-fit rounded-lg text-primary shadow-sm">
+<span class="material-symbols-outlined">bar_chart</span>
+</div>
+<div class="font-semibold text-text-main dark:text-white">Volume Sampah</div>
+<p class="text-xs text-text-muted leading-relaxed">Analisis total volume sampah terkumpul per wilayah geografis.</p>
+<div class="absolute top-4 right-4 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+</div>
+</label>
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="report_type" type="radio"/>
+<div class="p-4 rounded-lg border-2 border-transparent hover:border-primary/30 dark:hover:border-primary/30 peer-checked:border-primary bg-gray-50 dark:bg-black/20 peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10 transition-all flex flex-col gap-3 h-full">
+<div class="p-2 bg-white dark:bg-surface-dark w-fit rounded-lg text-text-muted shadow-sm group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<div class="font-semibold text-text-main dark:text-white">Efisiensi Koleksi</div>
+<p class="text-xs text-text-muted leading-relaxed">Laporan kinerja tim petugas dan durasi waktu pengumpulan.</p>
+<div class="absolute top-4 right-4 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+</div>
+</label>
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="report_type" type="radio"/>
+<div class="p-4 rounded-lg border-2 border-transparent hover:border-primary/30 dark:hover:border-primary/30 peer-checked:border-primary bg-gray-50 dark:bg-black/20 peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10 transition-all flex flex-col gap-3 h-full">
+<div class="p-2 bg-white dark:bg-surface-dark w-fit rounded-lg text-text-muted shadow-sm group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">branding_watermark</span>
+</div>
+<div class="font-semibold text-text-main dark:text-white">Audit Merek</div>
+<p class="text-xs text-text-muted leading-relaxed">Komposisi sampah berdasarkan merek produk dan jenis kemasan.</p>
+<div class="absolute top-4 right-4 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+</div>
+</label>
+</div>
+</section>
+<section class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50 shadow-sm space-y-8">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">date_range</span>
+                                Periode Waktu
+                            </h3>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-shrink-0">
+<div class="flex bg-gray-100 dark:bg-black/20 p-1.5 rounded-lg w-fit">
+<button class="px-4 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text-main dark:hover:text-white transition-colors">Mingguan</button>
+<button class="px-4 py-2 rounded-md text-sm font-medium bg-white dark:bg-surface-dark shadow-sm text-text-main dark:text-white">Bulanan</button>
+<button class="px-4 py-2 rounded-md text-sm font-medium text-text-muted hover:text-text-main dark:hover:text-white transition-colors">Kustom</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-text-muted uppercase tracking-wider">Dari Tanggal</label>
+<div class="relative">
+<input class="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2.5 text-text-main dark:text-white focus:ring-primary focus:border-primary pl-10" type="date" value="2023-10-01"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-sm pointer-events-none">calendar_today</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold text-text-muted uppercase tracking-wider">Sampai Tanggal</label>
+<div class="relative">
+<input class="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2.5 text-text-main dark:text-white focus:ring-primary focus:border-primary pl-10" type="date" value="2023-10-31"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-sm pointer-events-none">event</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px bg-gray-200 dark:bg-gray-700 w-full"></div>
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">filter_alt</span>
+                                Parameter Spesifik
+                            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-text-main dark:text-white">Area Geografis</label>
+<select class="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2.5 text-text-main dark:text-white focus:ring-primary focus:border-primary">
+<option>Semua Area</option>
+<option>Jakarta Pusat</option>
+<option>Bandung Utara</option>
+<option>Surabaya Timur</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-text-main dark:text-white">Jenis Sampah</label>
+<select class="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2.5 text-text-main dark:text-white focus:ring-primary focus:border-primary">
+<option>Semua Kategori</option>
+<option>Plastik (PET/HDPE)</option>
+<option>Kertas &amp; Karton</option>
+<option>Logam &amp; Aluminium</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-text-main dark:text-white">Tim Petugas</label>
+<select class="w-full bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-2.5 text-text-main dark:text-white focus:ring-primary focus:border-primary">
+<option>Semua Tim</option>
+<option>Tim Alpha</option>
+<option>Tim Beta</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class="lg:col-span-1">
+<div class="sticky top-6 space-y-6">
+<div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-700/50 shadow-sm flex flex-col h-full">
+<div class="mb-6 pb-6 border-b border-gray-200 dark:border-gray-700/50">
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-1">Pratinjau</h3>
+<p class="text-sm text-text-muted">Ringkasan konfigurasi laporan Anda.</p>
+</div>
+<div class="space-y-4 mb-8 flex-1">
+<div class="flex justify-between items-start">
+<span class="text-sm text-text-muted">Tipe</span>
+<span class="text-sm font-semibold text-text-main dark:text-white text-right">Volume Sampah</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-sm text-text-muted">Periode</span>
+<span class="text-sm font-semibold text-text-main dark:text-white text-right">1 Okt - 31 Okt 2023<br/><span class="text-xs font-normal text-text-muted">(Bulanan)</span></span>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-sm text-text-muted">Area</span>
+<span class="text-sm font-semibold text-text-main dark:text-white text-right">Semua Area</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-sm text-text-muted">Format</span>
+<span class="text-sm font-semibold text-text-main dark:text-white text-right">PDF &amp; Excel</span>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-black rounded-lg text-sm font-bold transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">download</span>
+                                    Unduh Laporan
+                                </button>
+<button class="w-full flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-gray-200 dark:border-gray-700 text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-lg text-sm font-semibold transition-colors">
+<span class="material-symbols-outlined">send</span>
+                                    Kirim via Email
+                                </button>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-900/30 flex gap-3 items-start">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400 shrink-0 text-sm mt-0.5">info</span>
+<p class="text-xs text-blue-800 dark:text-blue-300 leading-relaxed">
+                                Laporan mencakup data sensitif perusahaan. Pastikan Anda mematuhi kebijakan privasi data sebelum mengunduh atau membagikan dokumen ini.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

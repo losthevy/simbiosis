@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simbiosis - Detail Lapor Sampah</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "primary-hover": "#0fd460",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2e24",
+                        "text-main": "#111814",
+                        "text-muted": "#618972",
+                        "border-light": "#dbe6e0",
+                        "border-dark": "#2a4034",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<div class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="flex items-center justify-between h-20 px-6 lg:px-10 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark flex-shrink-0 z-10">
+<div class="flex items-center gap-6">
+<h1 class="text-text-main dark:text-white text-2xl font-black tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">recycling</span>
+                        SIMBIOSIS
+                    </h1>
+<div class="h-8 w-px bg-border-light dark:bg-border-dark hidden sm:block"></div>
+<h2 class="text-lg font-bold text-text-muted hidden sm:block">Layanan Warga</h2>
+</div>
+<div class="flex items-center flex-1 justify-end gap-4 sm:gap-6">
+<div class="hidden md:flex w-full max-w-md items-center h-12 rounded-xl bg-background-light dark:bg-background-dark border border-transparent focus-within:border-primary px-4 transition-all">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-text-main dark:text-white placeholder:text-text-muted" placeholder="Cari aktivitas, tantangan, atau teman..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2.5 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<div class="h-11 w-11 rounded-full bg-cover bg-center border-2 border-primary cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all" data-alt="Portrait of the user Alex" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2wtAaXqs2ceTwHc6jszwIHhy7Z0wfQNBoiuc1xZ0fM_lYEBDzVxxPKxTEjwK8_39fcQ3m150ZMJp-BW9mTg_GFsITX97ziXYmx7LAICcP2yOsJbnp-dll2qgqNb4Fpfhf412JSeiIpiS16ceJ7nEdcCLGzfXbi8hCn7APC-5etXdBgZqTQEbYOuwryuGaDcmQ5IWrplejkFBOp254eghKhk4OTNnQp2QDD5baxtY2MyUYozP8I6QtDR3StyfqudztgyMqS4azBv8');"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-6 lg:p-10 scroll-smooth">
+<div class="max-w-6xl mx-auto flex flex-col gap-8">
+<div class="flex items-start gap-4">
+<button class="group mt-1 p-2 rounded-full border border-border-light dark:border-border-dark hover:bg-surface-light dark:hover:bg-surface-dark hover:border-primary transition-all bg-surface-light dark:bg-surface-dark shadow-sm">
+<span class="material-symbols-outlined text-text-muted group-hover:text-primary transition-colors">arrow_back</span>
+</button>
+<div class="flex flex-col gap-1">
+<h1 class="text-3xl font-black text-text-main dark:text-white tracking-tight">Detail Lapor Sampah</h1>
+<p class="text-text-muted text-lg">Lengkapi data di bawah ini untuk melaporkan tumpukan sampah di sekitar Anda.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark shadow-sm">
+<label class="block text-base font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">add_a_photo</span>
+                                    Unggah Foto/Video
+                                    <span class="text-red-500">*</span>
+</label>
+<div class="border-2 border-dashed border-border-light dark:border-border-dark rounded-xl p-8 flex flex-col items-center justify-center text-center hover:bg-background-light dark:hover:bg-background-dark/50 hover:border-primary/50 transition-all cursor-pointer group h-48 bg-background-light/30 dark:bg-background-dark/30">
+<div class="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3 group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-3xl">cloud_upload</span>
+</div>
+<p class="font-bold text-text-main dark:text-white text-lg">Klik untuk unggah atau seret file ke sini</p>
+<p class="text-sm text-text-muted mt-2">Mendukung JPG, PNG, MP4 (Maks. 20MB)</p>
+</div>
+</div>
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark shadow-sm">
+<label class="block text-base font-bold text-text-main dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">category</span>
+                                    Jenis Sampah
+                                    <span class="text-red-500">*</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="waste_type" type="radio" value="organik"/>
+<div class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-border-light dark:border-border-dark bg-background-light/30 dark:bg-background-dark/30 hover:bg-background-light dark:hover:bg-background-dark transition-all peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:shadow-md">
+<div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<span class="font-bold text-sm text-text-main dark:text-white">Organik</span>
+</div>
+<div class="absolute top-2 right-2 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="waste_type" type="radio" value="anorganik"/>
+<div class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-border-light dark:border-border-dark bg-background-light/30 dark:bg-background-dark/30 hover:bg-background-light dark:hover:bg-background-dark transition-all peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:shadow-md">
+<div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-2xl">recycling</span>
+</div>
+<span class="font-bold text-sm text-text-main dark:text-white">Anorganik</span>
+</div>
+<div class="absolute top-2 right-2 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="waste_type" type="radio" value="b3"/>
+<div class="flex flex-col items-center gap-3 p-4 rounded-xl border-2 border-border-light dark:border-border-dark bg-background-light/30 dark:bg-background-dark/30 hover:bg-background-light dark:hover:bg-background-dark transition-all peer-checked:border-primary peer-checked:bg-primary/5 peer-checked:shadow-md">
+<div class="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+<span class="material-symbols-outlined text-2xl">warning</span>
+</div>
+<span class="font-bold text-sm text-text-main dark:text-white">B3 (Berbahaya)</span>
+</div>
+<div class="absolute top-2 right-2 text-primary opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+</label>
+</div>
+</div>
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark shadow-sm flex flex-col gap-6">
+<div>
+<label class="block text-base font-bold text-text-main dark:text-white mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">scale</span>
+                                        Perkiraan Jumlah/Berat
+                                    </label>
+<div class="relative max-w-xs">
+<input class="w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl px-4 py-3 pl-12 focus:ring-primary focus:border-primary dark:text-white outline-none transition-all placeholder:text-text-muted" placeholder="0" type="number"/>
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-muted">weight</span>
+</div>
+<div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none border-l border-border-light dark:border-border-dark ml-2 pl-2">
+<span class="text-text-main dark:text-white font-bold text-sm">Kg</span>
+</div>
+</div>
+<p class="text-xs text-text-muted mt-2">Estimasi kasar diperbolehkan.</p>
+</div>
+<div>
+<label class="block text-base font-bold text-text-main dark:text-white mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+                                        Deskripsi Lokasi / Catatan
+                                    </label>
+<textarea class="w-full bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-xl px-4 py-3 focus:ring-primary focus:border-primary dark:text-white outline-none transition-all resize-none placeholder:text-text-muted" placeholder="Contoh: Di depan pagar rumah warna biru, dekat tiang listrik..." rows="4"></textarea>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="p-6 bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark shadow-sm flex flex-col h-full sticky top-6">
+<div class="flex items-center justify-between mb-4">
+<label class="block text-base font-bold text-text-main dark:text-white flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">map</span>
+                                        Lokasi Kejadian
+                                    </label>
+<button class="text-primary text-sm font-bold hover:text-primary-hover flex items-center gap-1 bg-primary/10 px-3 py-1.5 rounded-lg hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-lg">my_location</span>
+                                        Lokasi Saya
+                                    </button>
+</div>
+<div class="relative w-full aspect-square lg:aspect-[4/3] bg-background-light dark:bg-background-dark rounded-xl overflow-hidden mb-6 border border-border-light dark:border-border-dark group shadow-inner">
+<div class="absolute inset-0 bg-[#e5e7eb] dark:bg-[#1f2937]" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="absolute inset-0 opacity-10 dark:opacity-20" style="background-image: linear-gradient(#94a3b8 1px, transparent 1px), linear-gradient(90deg, #94a3b8 1px, transparent 1px); background-size: 100px 100px;"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-4 flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-red-500 drop-shadow-xl z-10">location_on</span>
+<div class="w-8 h-2 bg-black/20 rounded-[100%] blur-[2px] mt-[-5px]"></div>
+<div class="bg-surface-light dark:bg-surface-dark px-3 py-1.5 rounded-lg shadow-lg text-xs font-bold text-text-main dark:text-white mt-2 whitespace-nowrap border border-border-light dark:border-border-dark">Geser Peta</div>
+</div>
+<div class="absolute bottom-4 right-4 flex flex-col gap-1">
+<button class="w-8 h-8 bg-surface-light dark:bg-surface-dark rounded-t-lg border border-border-light dark:border-border-dark flex items-center justify-center hover:bg-gray-50 text-text-main dark:text-white shadow-sm">+</button>
+<button class="w-8 h-8 bg-surface-light dark:bg-surface-dark rounded-b-lg border-x border-b border-border-light dark:border-border-dark flex items-center justify-center hover:bg-gray-50 text-text-main dark:text-white shadow-sm">-</button>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl border border-border-light dark:border-border-dark mb-6 flex gap-3">
+<div class="p-2 bg-surface-light dark:bg-surface-dark rounded-lg h-fit shadow-sm text-primary">
+<span class="material-symbols-outlined">place</span>
+</div>
+<div>
+<p class="text-xs font-bold text-text-muted uppercase tracking-wider mb-1">Alamat Terdeteksi</p>
+<p class="text-sm font-bold text-text-main dark:text-white leading-relaxed">Jl. Sudirman No. 45, RT.01/RW.03, Kel. Bendungan Hilir, Kec. Tanah Abang, Jakarta Pusat</p>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary text-text-main font-black text-lg py-4 px-6 rounded-xl hover:bg-primary-hover transition-all shadow-[0_4px_14px_0_rgba(19,236,109,0.39)] hover:shadow-[0_6px_20px_rgba(19,236,109,0.23)] hover:-translate-y-1 active:translate-y-0 active:scale-[0.98] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">send</span>
+                                        Laporkan Sekarang
+                                    </button>
+<p class="text-xs text-text-muted text-center mt-4 px-4 leading-normal">
+                                        Pastikan data yang Anda masukkan benar. Laporan palsu dapat mengakibatkan penangguhan akun.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

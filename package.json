@@ -1,0 +1,17 @@
+{
+  "name": "simbiosis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix apps/web-portal\" \"npm run dev --prefix apps/citizen-app\" \"npm run dev --prefix apps/workforce-app\" \"npm run dev --prefix apps/admin-dashboard\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

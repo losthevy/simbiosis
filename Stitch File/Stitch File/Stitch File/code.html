@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simbiosis - Konfirmasi Pembayaran Isi Saldo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "primary-hover": "#0fd460",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2e24",
+                        "text-main": "#111814",
+                        "text-muted": "#618972",
+                        "border-light": "#dbe6e0",
+                        "border-dark": "#2a4034",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<div class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="flex items-center justify-between h-20 px-6 lg:px-10 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark flex-shrink-0 z-10">
+<div class="flex items-center gap-6">
+<h1 class="text-text-main dark:text-white text-2xl font-black tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">recycling</span>
+                        SIMBIOSIS
+                    </h1>
+<div class="h-8 w-px bg-border-light dark:bg-border-dark hidden sm:block"></div>
+<h2 class="text-lg font-bold text-text-muted hidden sm:block">Isi Saldo</h2>
+</div>
+<div class="flex items-center flex-1 justify-end gap-4 sm:gap-6">
+<div class="hidden md:flex w-full max-w-md items-center h-12 rounded-xl bg-background-light dark:bg-background-dark border border-transparent focus-within:border-primary px-4 transition-all">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-text-main dark:text-white placeholder:text-text-muted" placeholder="Cari aktivitas, tantangan, atau teman..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2.5 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<div class="h-11 w-11 rounded-full bg-cover bg-center border-2 border-primary cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all" data-alt="Portrait of the user Alex" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2wtAaXqs2ceTwHc6jszwIHhy7Z0wfQNBoiuc1xZ0fM_lYEBDzVxxPKxTEjwK8_39fcQ3m150ZMJp-BW9mTg_GFsITX97ziXYmx7LAICcP2yOsJbnp-dll2qgqNb4Fpfhf412JSeiIpiS16ceJ7nEdcCLGzfXbi8hCn7APC-5etXdBgZqTQEbYOuwryuGaDcmQ5IWrplejkFBOp254eghKhk4OTNnQp2QDD5baxtY2MyUYozP8I6QtDR3StyfqudztgyMqS4azBv8');"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-6 lg:p-10 scroll-smooth">
+<div class="max-w-7xl mx-auto flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-2 text-text-muted hover:text-primary transition-colors w-fit mb-1" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="text-sm font-semibold">Kembali</span>
+</a>
+<h1 class="text-3xl md:text-4xl font-black text-text-main dark:text-white tracking-tight">Konfirmasi Pembayaran Isi Saldo</h1>
+<p class="text-lg text-text-muted dark:text-gray-400">Selesaikan pembayaran Anda dalam batas waktu yang ditentukan.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 flex flex-col gap-8">
+<div class="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-xl p-4 flex items-center gap-4">
+<div class="p-2 bg-orange-100 dark:bg-orange-800/40 rounded-full text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined">timer</span>
+</div>
+<div>
+<h3 class="font-bold text-orange-800 dark:text-orange-300">Selesaikan pembayaran dalam 23:59:45</h3>
+<p class="text-sm text-orange-700 dark:text-orange-400">Batas waktu pembayaran berakhir besok, pukul 14:30 WIB</p>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl p-6 lg:p-8 border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-xl font-bold text-text-main dark:text-white">Transfer Bank</h3>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-xs font-bold uppercase">BCA</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-muted">Nomor Rekening Tujuan</label>
+<div class="flex items-center gap-2">
+<div class="flex-1 bg-background-light dark:bg-background-dark p-4 rounded-xl border border-border-light dark:border-border-dark font-mono text-xl font-bold text-text-main dark:text-white flex justify-between items-center group">
+<span>8839 0001 2345 6789</span>
+<button class="text-text-muted hover:text-primary transition-colors p-1" title="Salin">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+</div>
+</div>
+<p class="text-sm text-text-muted">a.n. PT Simbiosis Solusi Digital</p>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-text-muted">Jumlah Transfer</label>
+<div class="flex items-center gap-2">
+<div class="flex-1 bg-background-light dark:bg-background-dark p-4 rounded-xl border border-border-light dark:border-border-dark font-mono text-xl font-bold text-text-main dark:text-white flex justify-between items-center group">
+<span>Rp 11.000</span>
+<button class="text-text-muted hover:text-primary transition-colors p-1" title="Salin">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-2 text-orange-600 dark:text-orange-400 text-sm mt-1">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Mohon transfer sesuai nominal hingga 3 digit terakhir.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<h3 class="text-lg font-bold text-text-main dark:text-white mb-2">Petunjuk Transfer</h3>
+<details class="group bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden" open="">
+<summary class="flex items-center justify-between p-4 cursor-pointer hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<span class="font-semibold text-text-main dark:text-white">ATM BCA</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-text-muted text-sm border-t border-border-light dark:border-border-dark">
+<ol class="list-decimal list-inside space-y-1 mt-4">
+<li>Masukkan kartu ATM dan PIN BCA Anda.</li>
+<li>Pilih menu Transaksi Lainnya &gt; Transfer &gt; ke Rekening BCA.</li>
+<li>Masukkan nomor rekening <strong>8839 0001 2345 6789</strong>.</li>
+<li>Masukkan jumlah transfer sesuai tagihan.</li>
+<li>Ikuti instruksi selanjutnya untuk menyelesaikan transaksi.</li>
+</ol>
+</div>
+</details>
+<details class="group bg-surface-light dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark overflow-hidden">
+<summary class="flex items-center justify-between p-4 cursor-pointer hover:bg-background-light dark:hover:bg-background-dark transition-colors">
+<span class="font-semibold text-text-main dark:text-white">M-BCA (Mobile Banking)</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="p-4 pt-0 text-text-muted text-sm border-t border-border-light dark:border-border-dark">
+<p class="mt-4">Login ke m-BCA, pilih m-Transfer, masukkan rekening dan nominal.</p>
+</div>
+</details>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="rounded-2xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-sm overflow-hidden sticky top-6">
+<div class="p-6 border-b border-border-light dark:border-border-dark bg-background-light/50 dark:bg-background-dark/50">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Rincian Transaksi</h3>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-muted">ID Transaksi</span>
+<span class="font-mono font-bold text-text-main dark:text-white">#TRX-899201</span>
+</div>
+<div class="h-px bg-border-light dark:bg-border-dark"></div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-muted">Nominal Top Up</span>
+<span class="font-bold text-text-main dark:text-white">Rp 10.000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-muted">Biaya Layanan</span>
+<span class="font-bold text-text-main dark:text-white">Rp 1.000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-text-muted">Bonus Poin</span>
+<span class="font-bold text-primary">+100 Poin</span>
+</div>
+<div class="h-px bg-border-light dark:bg-border-dark my-2"></div>
+<div class="flex justify-between items-center text-lg">
+<span class="font-bold text-text-main dark:text-white">Total Bayar</span>
+<span class="font-black text-primary text-2xl">Rp 11.000</span>
+</div>
+<div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 text-xs text-blue-700 dark:text-blue-300 mt-2">
+                                Status: <span class="font-bold">Menunggu Pembayaran</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center gap-2 text-text-muted opacity-70">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-xs font-semibold">Transaksi Anda dilindungi SIMBIOSIS Protection</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

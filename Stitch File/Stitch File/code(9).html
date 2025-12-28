@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Semua Koleksi Sampah</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "primary-dark": "#0eb553",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2e24",
+                        "text-main": "#111814",
+                        "text-muted": "#618972",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24
+        }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display overflow-hidden h-screen flex">
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden bg-background-light dark:bg-background-dark">
+<header class="h-16 flex items-center justify-between px-8 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 flex-shrink-0 z-10">
+<h2 class="text-xl font-bold tracking-tight text-text-main dark:text-white">Selamat datang kembali, Admin</h2>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center bg-gray-100 dark:bg-white/5 rounded-lg px-3 h-10 w-64 border border-transparent focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 text-text-main dark:text-white placeholder-text-muted" placeholder="Cari audit, pengguna..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="h-10 w-10 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-text-main dark:text-white transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 h-2 w-2 rounded-full bg-red-500 border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="h-8 w-px bg-gray-200 dark:bg-gray-700 mx-1"></div>
+<button class="flex items-center gap-3 pl-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+<div class="h-9 w-9 rounded-full bg-center bg-cover border border-gray-200 dark:border-gray-700" data-alt="Admin user profile picture showing a smiling man" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLo4NrYcGtlGXTWKt6PV-23GwlEIpEH3Y8v7n_qoE0Lj_p-DUQfYl_Q4kKsLVHJjEC7Jdoju6WxSX5XKUY-XkFQnWd9vjpGmDwpTXbfuxUjN1SZXcSEZ2fooxKX9krVtiB41-Cv6SlxBqNoWl0mDJIzXLYZTbqktnLyEEmZNwdvSeJQbev4IQE-vVzzXm1bf1Xy0vsYSQsUCB-_-ywiUHAyAj8_-D4DPo5R5HW6eaIAdBt_fJ4mlke-3UNFbVnT4MVw213ARnJTCw');">
+</div>
+</button>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-8">
+<div class="w-full max-w-7xl mx-auto space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h1 class="text-2xl font-bold text-text-main dark:text-white">Semua Koleksi Sampah</h1>
+<p class="text-text-muted mt-1 text-sm">Lihat dan kelola semua data pengumpulan sampah dari mitra di seluruh lokasi.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                        Ekspor CSV
+                    </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-dark text-black rounded-lg text-sm font-bold transition-colors shadow-sm shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">add</span>
+                        Catat Koleksi
+                    </button>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl border border-gray-200 dark:border-gray-700/50 shadow-sm">
+<div class="flex flex-col lg:flex-row gap-4">
+<div class="flex-1 relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-muted">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-gray-200 dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-black/20 text-text-main dark:text-white placeholder-text-muted focus:ring-primary focus:border-primary sm:text-sm" placeholder="Cari berdasarkan ID, lokasi, atau merek..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-3">
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-2 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors w-full sm:w-auto justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px]">calendar_today</span>
+                                    Rentang Tanggal
+                                </span>
+<span class="material-symbols-outlined text-text-muted text-[20px]">expand_more</span>
+</button>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-2 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors w-full sm:w-auto justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px]">filter_list</span>
+                                    Status
+                                </span>
+<span class="material-symbols-outlined text-text-muted text-[20px]">expand_more</span>
+</button>
+</div>
+<div class="relative">
+<button class="flex items-center gap-2 px-3 py-2 bg-gray-50 dark:bg-black/20 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-text-main dark:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors w-full sm:w-auto justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[20px]">category</span>
+                                    Tipe
+                                </span>
+<span class="material-symbols-outlined text-text-muted text-[20px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl border border-gray-200 dark:border-gray-700/50 shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="text-xs text-text-muted uppercase bg-gray-50 dark:bg-black/20 sticky top-0 z-10">
+<tr>
+<th class="px-6 py-4 font-medium">
+<div class="flex items-center gap-1 cursor-pointer hover:text-primary transition-colors">
+                                        ID
+                                        <span class="material-symbols-outlined text-[16px]">unfold_more</span>
+</div>
+</th>
+<th class="px-6 py-4 font-medium">Lokasi</th>
+<th class="px-6 py-4 font-medium">
+<div class="flex items-center gap-1 cursor-pointer hover:text-primary transition-colors">
+                                        Merek
+                                        <span class="material-symbols-outlined text-[16px]">unfold_more</span>
+</div>
+</th>
+<th class="px-6 py-4 font-medium">Tipe</th>
+<th class="px-6 py-4 font-medium text-right">
+<div class="flex items-center justify-end gap-1 cursor-pointer hover:text-primary transition-colors">
+                                        Berat
+                                        <span class="material-symbols-outlined text-[16px]">unfold_more</span>
+</div>
+</th>
+<th class="px-6 py-4 font-medium text-center">Status</th>
+<th class="px-6 py-4 font-medium text-right">
+<div class="flex items-center justify-end gap-1 cursor-pointer hover:text-primary transition-colors">
+                                        Tanggal
+                                        <span class="material-symbols-outlined text-[16px]">unfold_more</span>
+</div>
+</th>
+<th class="px-6 py-4 font-medium text-right">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 dark:divide-gray-700/50">
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#COL-2940</td>
+<td class="px-6 py-4 text-text-muted flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-cover bg-center shrink-0 border border-gray-200 dark:border-gray-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsb6VN2FFSp-UZxWjIg-PcM5u8-fSl8olc5ShdH3B6erXu246j4_EQJo_t0T_IuqBx4FZIM_B3vTlkZZyTiDUoPzRFOspuzE3-jx-7SNMfr5OJtWpIGt2BRK1PiYdIkJmdXLgzZEskXJN80vxjc74AiFh4z7o-xSldCus2cJntnFuenRFptrl7w8S-7FEVIq9lKruTpvK_ZPHvxbp9QvAdIyZyvhaKc4v1_qeCQBELCcZ7hkdL16g6nTJvZvUIY6JmmxRCv6euKGk')"></div>
+<span class="font-medium text-text-main dark:text-white">Jakarta Pusat</span>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-white">Unilever</td>
+<td class="px-6 py-4 text-text-muted"><span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded text-xs font-medium">Plastik (HDPE)</span></td>
+<td class="px-6 py-4 text-text-main dark:text-white text-right font-medium">1.204 kg</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                        Terverifikasi
+                                    </span>
+</td>
+<td class="px-6 py-4 text-text-muted text-right">24 Okt 2023</td>
+<td class="px-6 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors p-1 rounded hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#COL-2939</td>
+<td class="px-6 py-4 text-text-muted flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-cover bg-center shrink-0 border border-gray-200 dark:border-gray-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAg2WnlWGrOmiHU_erisGIjScBz07lQwmF1QSF9Y12xXjaHpL2TDI60JDq2kJWtlWkTMNe93qKJVM_9b0Exm3qeSfhJ4McfFX6c3SmwCYFgRQi68qUXoiiMbMlBR5JEfR5NR5kUCrMwa_uevlZ53Nqyp_FutMtFpF5Ix14wygXCKJNXEV9zBJ-D52w2FCZJmVwzGxj9nD1C-YHfxRws-Q8q7EJLGvv4RqKdD2x4zglkftkVJ7KNaMvEyDh_iVKzKNjpDINEBXctlc')"></div>
+<span class="font-medium text-text-main dark:text-white">Bandung Utara</span>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-white">Danone</td>
+<td class="px-6 py-4 text-text-muted"><span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded text-xs font-medium">Kertas Campuran</span></td>
+<td class="px-6 py-4 text-text-main dark:text-white text-right font-medium">850 kg</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/40 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800">
+                                        Tertunda
+                                    </span>
+</td>
+<td class="px-6 py-4 text-text-muted text-right">23 Okt 2023</td>
+<td class="px-6 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors p-1 rounded hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#COL-2938</td>
+<td class="px-6 py-4 text-text-muted flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-cover bg-center shrink-0 border border-gray-200 dark:border-gray-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiPxonezBbrGCPSQ19cnBfUJmJoIm7PW9otNEY3JbtPynmqj7aj9mWBBp_3MO3VQckaBNtrjNJYGfgJrxHvCE2G4qQa-ZLXuKp9blp59eOUJ5OT5fP_ANfPg0PFW_XZwKsd6L_59QUGqjYfa-_TQ06jTtSRONMgf-BLZ53PCrW_rceWHPusjkKWn1tOai8RD88GT8HT3ACGGQ6LuVQj5s9GBCcpvM5C01JM5rLa4f8FLiLgZbUwe0guPOJwF3uL6GbG7TMxJmi96o')"></div>
+<span class="font-medium text-text-main dark:text-white">Surabaya Timur</span>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-white">Nestlé</td>
+<td class="px-6 py-4 text-text-muted"><span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded text-xs font-medium">Logam (Alu)</span></td>
+<td class="px-6 py-4 text-text-main dark:text-white text-right font-medium">340 kg</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                        Terverifikasi
+                                    </span>
+</td>
+<td class="px-6 py-4 text-text-muted text-right">23 Okt 2023</td>
+<td class="px-6 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors p-1 rounded hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#COL-2937</td>
+<td class="px-6 py-4 text-text-muted flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-cover bg-center shrink-0 border border-gray-200 dark:border-gray-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrZo2Kiz77wcIvrd_cMlpL4Ivbe1E-y7yUTsdNKATtDLDTJCJCvDHT7b__TJXcn86HhiRux-Kbk6N7XLZKOtopLewelE9oczzGN5sMT_4HAAC1ZW1fxXYWA00sFGd2-wg7rUt9tgMfTDvHYESytUq3lcT9Q24BQAm1iFJdUlVddSd9p3foKcTuBA-uil-ibhIVeO0fRs93N6Nx-LIYOszjBT3IwblVK86bQgUCIAP3RMakouLJuF0QBy0DuWasMVXp9bGJuJ-TBFk')"></div>
+<span class="font-medium text-text-main dark:text-white">Bali Resort</span>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-white">Coca-Cola</td>
+<td class="px-6 py-4 text-text-muted"><span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded text-xs font-medium">Plastik (PET)</span></td>
+<td class="px-6 py-4 text-text-main dark:text-white text-right font-medium">2.100 kg</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                        Terverifikasi
+                                    </span>
+</td>
+<td class="px-6 py-4 text-text-muted text-right">22 Okt 2023</td>
+<td class="px-6 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors p-1 rounded hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-text-main dark:text-white">#COL-2936</td>
+<td class="px-6 py-4 text-text-muted flex items-center gap-3">
+<div class="h-8 w-8 rounded bg-cover bg-center shrink-0 border border-gray-200 dark:border-gray-700 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-400 text-sm">map</span>
+</div>
+<span class="font-medium text-text-main dark:text-white">Medan Kota</span>
+</td>
+<td class="px-6 py-4 text-text-main dark:text-white">Indofood</td>
+<td class="px-6 py-4 text-text-muted"><span class="bg-gray-100 dark:bg-white/10 px-2 py-1 rounded text-xs font-medium">Plastik (Flexible)</span></td>
+<td class="px-6 py-4 text-text-main dark:text-white text-right font-medium">560 kg</td>
+<td class="px-6 py-4 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
+                                        Diproses
+                                    </span>
+</td>
+<td class="px-6 py-4 text-text-muted text-right">21 Okt 2023</td>
+<td class="px-6 py-4 text-right">
+<button class="text-text-muted hover:text-primary transition-colors p-1 rounded hover:bg-gray-100 dark:hover:bg-white/10">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-4 border-t border-gray-200 dark:border-gray-700/50 flex flex-col sm:flex-row justify-between items-center gap-4 bg-gray-50 dark:bg-black/10">
+<span class="text-sm text-text-muted">
+                        Menampilkan <span class="font-medium text-text-main dark:text-white">1</span> sampai <span class="font-medium text-text-main dark:text-white">5</span> dari <span class="font-medium text-text-main dark:text-white">128</span> hasil
+                    </span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 text-sm text-text-muted bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-white/5 disabled:opacity-50 transition-colors shadow-sm" disabled="">
+                            Sebelumnya
+                        </button>
+<button class="px-3 py-1 text-sm bg-primary text-black font-semibold rounded shadow-sm hover:bg-primary-dark transition-colors">
+                            1
+                        </button>
+<button class="px-3 py-1 text-sm text-text-main dark:text-white bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-sm">
+                            2
+                        </button>
+<button class="px-3 py-1 text-sm text-text-main dark:text-white bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-sm">
+                            3
+                        </button>
+<span class="text-text-muted">...</span>
+<button class="px-3 py-1 text-sm text-text-main dark:text-white bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-sm">
+                            10
+                        </button>
+<button class="px-3 py-1 text-sm text-text-main dark:text-white bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-white/5 transition-colors shadow-sm">
+                            Berikutnya
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+</body></html>

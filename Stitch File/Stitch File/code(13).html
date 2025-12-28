@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Simbiosis - Dasbor Warga</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "primary-hover": "#0fd460",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2e24",
+                        "text-main": "#111814",
+                        "text-muted": "#618972",
+                        "border-light": "#dbe6e0",
+                        "border-dark": "#2a4034",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<div class="flex-1 flex flex-col h-full overflow-hidden relative">
+<header class="flex items-center justify-between h-20 px-6 lg:px-10 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark flex-shrink-0 z-10">
+<div class="flex items-center gap-6">
+<h1 class="text-text-main dark:text-white text-2xl font-black tracking-tight flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">recycling</span>
+                SIMBIOSIS
+            </h1>
+<div class="h-8 w-px bg-border-light dark:bg-border-dark hidden sm:block"></div>
+<h2 class="text-lg font-bold text-text-muted hidden sm:block">Dasbor Warga</h2>
+</div>
+<div class="flex items-center flex-1 justify-end gap-4 sm:gap-6">
+<div class="hidden md:flex w-full max-w-md items-center h-12 rounded-xl bg-background-light dark:bg-background-dark border border-transparent focus-within:border-primary px-4 transition-all">
+<span class="material-symbols-outlined text-text-muted">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-text-main dark:text-white placeholder:text-text-muted" placeholder="Cari aktivitas, tantangan, atau teman..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative p-2.5 rounded-full hover:bg-background-light dark:hover:bg-background-dark text-text-main dark:text-white transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2.5 right-2.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-surface-light dark:border-surface-dark"></span>
+</button>
+<div class="h-11 w-11 rounded-full bg-cover bg-center border-2 border-primary cursor-pointer hover:ring-2 hover:ring-primary/30 transition-all" data-alt="Portrait of the user Alex" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2wtAaXqs2ceTwHc6jszwIHhy7Z0wfQNBoiuc1xZ0fM_lYEBDzVxxPKxTEjwK8_39fcQ3m150ZMJp-BW9mTg_GFsITX97ziXYmx7LAICcP2yOsJbnp-dll2qgqNb4Fpfhf412JSeiIpiS16ceJ7nEdcCLGzfXbi8hCn7APC-5etXdBgZqTQEbYOuwryuGaDcmQ5IWrplejkFBOp254eghKhk4OTNnQp2QDD5baxtY2MyUYozP8I6QtDR3StyfqudztgyMqS4azBv8');"></div>
+</div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-6 lg:p-10 scroll-smooth">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-[1920px] mx-auto">
+<div class="lg:col-span-8 flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl md:text-4xl font-black text-text-main dark:text-white tracking-tight">Selamat datang kembali, Alex!</h1>
+<p class="text-lg text-text-muted dark:text-gray-400">Berikut adalah ringkasan dampak harian dan tugas aktif Anda.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<button class="group flex flex-col items-start gap-4 p-6 rounded-2xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all text-left">
+<div class="p-3.5 rounded-xl bg-[#e0fdf0] text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">delete_outline</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-text-main dark:text-white">Lapor Sampah</h3>
+<p class="text-sm text-text-muted mt-1">Pindai QR atau foto</p>
+</div>
+</button>
+<button class="group flex flex-col items-start gap-4 p-6 rounded-2xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all text-left">
+<div class="p-3.5 rounded-xl bg-[#e0fdf0] text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">flag</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-text-main dark:text-white">Gabung Tantangan</h3>
+<p class="text-sm text-text-muted mt-1">3 Baru di dekat Anda</p>
+</div>
+</button>
+<button class="group flex flex-col items-start gap-4 p-6 rounded-2xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all text-left">
+<div class="p-3.5 rounded-xl bg-[#e0fdf0] text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">redeem</span>
+</div>
+<div>
+<h3 class="font-bold text-lg text-text-main dark:text-white">Tukar Poin</h3>
+<p class="text-sm text-text-muted mt-1">Belanja produk ramah lingkungan</p>
+</div>
+</button>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-bold text-text-main dark:text-white">Tantangan Aktif</h3>
+<a class="text-sm font-bold text-primary hover:text-primary-hover flex items-center gap-1" href="#">
+                                    Lihat Semua 
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col rounded-2xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark overflow-hidden hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Community cleaning up plastic bottles in a park" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBSjRzvuj3hAz0UsmM6IJ9sUEm_bVPhgLZvTQ0R1S5YmZAPEN0GfsEAfW4GJDRxVV2aFmE3-5jz-TzSsf9AFBFGZifgTBPyig55VbG1AxMKQya6Mpz6_-w7OEDpQa5Y8jX0Tvz6YjnBdBIPVZd4B09oVhhCoDSkJIFBr9bafT2sM5FhynzTqBloEv3vxv29fW_tqXgLr0NxGNaOBJklYX3r0CP8IudbMkJYDYGFq1Hjmn0LmMdpPWbosVpPWWN0gZArpzHCMGq_nWQ');">
+<div class="absolute top-4 right-4 bg-surface-light/95 backdrop-blur-sm px-3 py-1.5 rounded-lg text-sm font-bold text-text-main shadow-sm border border-border-light">
+                                        500 poin
+                                    </div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<h4 class="font-bold text-text-main dark:text-white text-lg">Bersih-bersih Taman Akhir Pekan</h4>
+<p class="text-base text-text-muted mt-1">Kumpulkan 5kg barang daur ulang di Taman Pusat.</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium text-text-muted">
+<span>Kemajuan</span>
+<span class="text-primary font-bold">60%</span>
+</div>
+<div class="w-full bg-background-light dark:bg-background-dark rounded-full h-3 overflow-hidden border border-border-light dark:border-border-dark">
+<div class="bg-primary h-3 rounded-full shadow-[0_0_10px_rgba(19,236,109,0.3)]" style="width: 60%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col rounded-2xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark overflow-hidden hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-cover bg-center relative" data-alt="Assorted plastic free reusable grocery bags" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJIW6IVbveS8pgjS0FPJUoHWkGIEj7GrwgHbE-0-KDxtqa23h-u2qGHyZpMQqq1TM7L5Onrzz_0YO9QQIoyPRj3pJNm_OkoHuZBtbmDmyW0J3FJx_gXWOpi6SCq2JDNAx1J1NtqxVp_TRLElEBtJpKG6fLKVWv4wRccYpr5iztJm69sU0C0qrpjZMRlnFp2LHEzFyYU1L4lxuPlG8oiZ8pYA_foozAoGlICQ8qb_HvvNlFEO0CvSZ4V5vpxDt3uK5rrMjzo2vMSeg');">
+<div class="absolute top-4 right-4 bg-surface-light/95 backdrop-blur-sm px-3 py-1.5 rounded-lg text-sm font-bold text-text-main shadow-sm border border-border-light">
+                                        300 poin
+                                    </div>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<h4 class="font-bold text-text-main dark:text-white text-lg">Minggu Bebas Plastik</h4>
+<p class="text-base text-text-muted mt-1">Hindari plastik sekali pakai selama 7 hari.</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-sm font-medium text-text-muted">
+<span>Kemajuan</span>
+<span class="text-primary font-bold">2/7 Hari</span>
+</div>
+<div class="w-full bg-background-light dark:bg-background-dark rounded-full h-3 overflow-hidden border border-border-light dark:border-border-dark">
+<div class="bg-primary h-3 rounded-full shadow-[0_0_10px_rgba(19,236,109,0.3)]" style="width: 28%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-xl font-bold text-text-main dark:text-white">Aktivitas Terbaru</h3>
+<div class="flex flex-col rounded-2xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark divide-y divide-border-light dark:divide-border-dark">
+<div class="flex items-center gap-5 p-5 hover:bg-background-light/50 transition-colors">
+<div class="h-12 w-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-2xl">compost</span>
+</div>
+<div class="flex-1">
+<p class="text-base font-bold text-text-main dark:text-white">Limbah Organik Diproses</p>
+<p class="text-sm text-text-muted">2 jam yang lalu</p>
+</div>
+<span class="text-base font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">+50 poin</span>
+</div>
+<div class="flex items-center gap-5 p-5 hover:bg-background-light/50 transition-colors">
+<div class="h-12 w-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-2xl">recycling</span>
+</div>
+<div class="flex-1">
+<p class="text-base font-bold text-text-main dark:text-white">Botol Plastik Disetor</p>
+<p class="text-sm text-text-muted">Kemarin</p>
+</div>
+<span class="text-base font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">+120 poin</span>
+</div>
+<div class="flex items-center gap-5 p-5 hover:bg-background-light/50 transition-colors">
+<div class="h-12 w-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-symbols-outlined text-2xl">inventory_2</span>
+</div>
+<div class="flex-1">
+<p class="text-base font-bold text-text-main dark:text-white">Hadiah Tantangan: Jalan Bersih</p>
+<p class="text-sm text-text-muted">2 hari yang lalu</p>
+</div>
+<span class="text-base font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">+300 poin</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="rounded-2xl p-8 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark relative overflow-hidden group shadow-sm">
+<div class="absolute -top-16 -right-16 w-48 h-48 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all duration-700"></div>
+<div class="relative z-10 flex flex-col gap-6">
+<div class="flex items-center gap-2 text-text-muted">
+<div class="p-2 bg-background-light dark:bg-background-dark rounded-lg">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="text-base font-semibold">Saldo EcoPoin</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-5xl font-black text-text-main dark:text-white tracking-tight">1.250</span>
+<span class="text-base text-text-muted font-medium">≈ Rp185.000 nilai</span>
+</div>
+<div class="flex gap-3 mt-2">
+<button class="flex-1 bg-primary text-text-main font-bold text-base py-3 px-6 rounded-xl hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20">
+                                    Isi Saldo
+                                </button>
+<button class="flex-1 bg-background-light dark:bg-background-dark text-text-main dark:text-white font-bold text-base py-3 px-6 rounded-xl border border-border-light dark:border-border-dark hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                    Riwayat
+                                </button>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-8 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark flex flex-col gap-6 shadow-sm">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-text-main dark:text-white">Dampak Mingguan</h3>
+<p class="text-base text-text-muted mt-1">12kg Didaur Ulang (+20%)</p>
+</div>
+<div class="bg-primary/10 text-primary p-2.5 rounded-xl">
+<span class="material-symbols-outlined text-2xl">monitoring</span>
+</div>
+</div>
+<div class="flex items-end gap-3 lg:gap-4 h-48 mt-2 pt-6 border-t border-dashed border-border-light dark:border-border-dark">
+<div class="flex-1 flex flex-col justify-end gap-2 group cursor-pointer h-full">
+<div class="w-full bg-primary/30 h-[40%] rounded-t-lg group-hover:bg-primary/50 transition-all relative">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main text-white text-xs py-1 px-2 rounded pointer-events-none transition-opacity">4kg</div>
+</div>
+<span class="text-xs font-semibold text-center text-text-muted">Sen</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-2 group cursor-pointer h-full">
+<div class="w-full bg-primary/30 h-[60%] rounded-t-lg group-hover:bg-primary/50 transition-all relative">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main text-white text-xs py-1 px-2 rounded pointer-events-none transition-opacity">6kg</div>
+</div>
+<span class="text-xs font-semibold text-center text-text-muted">Sel</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-2 group cursor-pointer h-full">
+<div class="w-full bg-primary/30 h-[30%] rounded-t-lg group-hover:bg-primary/50 transition-all relative">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main text-white text-xs py-1 px-2 rounded pointer-events-none transition-opacity">3kg</div>
+</div>
+<span class="text-xs font-semibold text-center text-text-muted">Rab</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-2 group cursor-pointer h-full">
+<div class="w-full bg-primary/30 h-[80%] rounded-t-lg group-hover:bg-primary/50 transition-all relative">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main text-white text-xs py-1 px-2 rounded pointer-events-none transition-opacity">8kg</div>
+</div>
+<span class="text-xs font-semibold text-center text-text-muted">Kam</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-2 group cursor-pointer h-full">
+<div class="w-full bg-primary h-[90%] rounded-t-lg shadow-[0_0_15px_rgba(19,236,109,0.4)] relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-primary text-text-main font-bold text-xs py-1 px-2 rounded pointer-events-none">12kg</div>
+</div>
+<span class="text-xs font-bold text-center text-text-main dark:text-white">Jum</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-2 group cursor-pointer h-full">
+<div class="w-full bg-primary/30 h-[50%] rounded-t-lg group-hover:bg-primary/50 transition-all relative">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main text-white text-xs py-1 px-2 rounded pointer-events-none transition-opacity">5kg</div>
+</div>
+<span class="text-xs font-semibold text-center text-text-muted">Sab</span>
+</div>
+<div class="flex-1 flex flex-col justify-end gap-2 group cursor-pointer h-full">
+<div class="w-full bg-primary/30 h-[20%] rounded-t-lg group-hover:bg-primary/50 transition-all relative">
+<div class="opacity-0 group-hover:opacity-100 absolute -top-8 left-1/2 -translate-x-1/2 bg-text-main text-white text-xs py-1 px-2 rounded pointer-events-none transition-opacity">2kg</div>
+</div>
+<span class="text-xs font-semibold text-center text-text-muted">Min</span>
+</div>
+</div>
+</div>
+<div class="rounded-2xl p-0 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark overflow-hidden shadow-sm">
+<div class="p-8 pb-6 border-b border-border-light dark:border-border-dark bg-background-light/50 dark:bg-background-dark/50">
+<h3 class="text-lg font-bold text-text-main dark:text-white">Peringkat Lingkungan</h3>
+<div class="flex items-center gap-3 mt-2 bg-yellow-500/10 w-fit px-3 py-1.5 rounded-lg border border-yellow-500/20">
+<span class="material-symbols-outlined text-yellow-600 text-xl">military_tech</span>
+<p class="text-sm font-medium text-text-main dark:text-white">Anda di <span class="text-yellow-700 dark:text-yellow-500 font-bold">#4</span> di Green Valley</p>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-4 px-8 py-5 hover:bg-background-light dark:hover:bg-background-dark transition-colors border-b border-border-light/50 dark:border-border-dark/50">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 font-bold text-text-muted">1</div>
+<div class="h-10 w-10 rounded-full bg-cover bg-center ring-2 ring-transparent group-hover:ring-primary/50" data-alt="Portrait of Sarah" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCB9YUBbNxnc2MHj4dUntODkLBSP7MOlJf6T414YdhCwIzhiM_S05eLtaabsN2aNPgxoVHX8loyMigrqCocBgplRXOUGDHxVfci7yfooKF7fpUfvNVBZIHEiyruJ8leWc2bYJ1IjJwM93ofUOcFEyNcs8YszBLg9xvj2e9mOShuO2MmtHTc6BEP6D0UUpA1a-3rU_x5dAfVBvzFfs8awiYs2jP4F1t0OhNteoKz4RapNS9jjywdAnTHyaCHEDv4tMb_1onIPYUml9c');"></div>
+<span class="text-base font-medium flex-1 text-text-main dark:text-white">Sarah Jenkins</span>
+<span class="text-sm font-bold text-primary bg-primary/5 px-2 py-1 rounded">2.450</span>
+</div>
+<div class="flex items-center gap-4 px-8 py-5 hover:bg-background-light dark:hover:bg-background-dark transition-colors border-b border-border-light/50 dark:border-border-dark/50">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 font-bold text-text-muted">2</div>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" data-alt="Portrait of Mike" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3xCtfu6Ak-otg_cRT7K5piZXR3myvqHYwuIvzm8Q81k8SYeh6pLYvZJlzN5RGe3PuooP-67dvxe-LgV7A4nd9owJN2FBg5p46qfjqsBV474XZ7RBVrAqZxJ9dFzJj0VDP-VqJbDHcFlbYzY4_W-R3ri2H9aUL6rMjAOTLTciiiHnGpISEBDfY0Gtk8wT8cHmXO9cGFLBQN08V7PWwp2F5O0WOW-i4OevB5InGFyHmnRZWcHzwfMShK5EDq6FO3QZnyCqaHtop6Hk');"></div>
+<span class="text-base font-medium flex-1 text-text-main dark:text-white">Mike Ross</span>
+<span class="text-sm font-bold text-primary bg-primary/5 px-2 py-1 rounded">1.980</span>
+</div>
+<div class="flex items-center gap-4 px-8 py-5 hover:bg-background-light dark:hover:bg-background-dark transition-colors border-b border-border-light/50 dark:border-border-dark/50">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 font-bold text-text-muted">3</div>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" data-alt="Portrait of Emily" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCwOXLTmhLgh-jYLqpvQ7OlqiHk-v0mj2UC1pN8hEPi4wi22vGFFFw96yP-5_08Yew9h9nQL7GbqiOrNjQ__hz3pzH7PXD-T3J9VByRpZUu64Y7ZD0W7hrE8Ts7kO31JltEkIecHT9chUfmFuMZapnS-8R5HkoAM3l6xiSsivTdvXlW5xAPJOvE7gKudbnJPyt6us6oA_uZz3JQA0KrGpqR6GqCFET9nk9-lyz1iPijZqIFxIEc765O94Bd4afEYdRD0y94nUa7Qlg');"></div>
+<span class="text-base font-medium flex-1 text-text-main dark:text-white">Emily Clark</span>
+<span class="text-sm font-bold text-primary bg-primary/5 px-2 py-1 rounded">1.560</span>
+</div>
+<div class="flex items-center gap-4 px-8 py-5 bg-primary/5 border-l-4 border-primary">
+<div class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-text-main font-bold">4</div>
+<div class="h-10 w-10 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Portrait of user Alex" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAz3P335I0SOrT2N6gdhhmDt3UF86DIO0LxOovoN-C3sJzj0-rGe7JG5nCJ6mdCbFmjDQesgoW4IBga1EnMunwBAHWFDPYI8yFLdSoYaAtnVU3zH89DTuH7tbWHU2gWbPxiHBFeN_NB4chWvKPl_GdeIRmYUs_U6u_HvX3kkFSzk8PXEaTF3ljuooK4OznHMBZRf3UxuG-JCoZZGnjiqva-gGfcmWkpfPkTXvOWWGiw9L48pLJg-T9_c-30F8IHouViekFfVN3OoOc');"></div>
+<span class="text-base font-bold flex-1 text-text-main dark:text-white">Anda</span>
+<span class="text-sm font-bold text-primary">1.250</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

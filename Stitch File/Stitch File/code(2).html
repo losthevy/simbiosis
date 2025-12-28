@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dasbor Instan Petugas - SIMBIOSIS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111814] dark:text-white font-display transition-colors duration-200">
+<div class="flex h-screen w-full overflow-hidden">
+<main class="flex-1 flex flex-col h-full overflow-hidden relative w-full">
+<header class="h-16 flex items-center justify-between px-6 border-b border-[#f0f4f2] dark:border-[#2a3c30] bg-surface-light dark:bg-surface-dark shrink-0">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined text-xl">recycling</span>
+</div>
+<div>
+<h1 class="text-lg font-bold tracking-tight leading-none">SIMBIOSIS</h1>
+</div>
+</div>
+<div class="h-6 w-px bg-gray-200 dark:bg-gray-700 mx-1 hidden sm:block"></div>
+<h2 class="text-lg font-medium text-gray-500 dark:text-gray-400 hidden sm:block">Dasbor</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300 transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-red-500 rounded-full border-2 border-white dark:border-surface-dark"></span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-[#f0f4f2] dark:border-[#2a3c30]">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold leading-tight">Budi Santoso</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">ID: #WF-8821</p>
+</div>
+<div class="size-9 rounded-full bg-gray-200 dark:bg-gray-700 bg-center bg-cover border-2 border-primary" data-alt="Portrait of waste collector Budi smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnEKdrBPJsUzMKI6VSEqP1gSDJ3GqIFmNMY3M_yRV8WNlaq_LDoBX3KOqyqVeJwvxNie52xIt594WxeLF_th6A6f_Rr8NIMq4QIXunyb3cJCWLpKVkwLdsKYpaJruO22AtUup8f-qb4LxtaEzyDFMbJkASeiXYDP7Iqd8nzoH-BRlAHOlensswO_yOqV-HOJP5KUd_6ZBhPUwMpMG7O3iWDfTBOSZy1doFp63YxvF2kwN5erxKdKDTjOQdw3ZGxowImonNKA726i8');">
+</div>
+</div>
+</div>
+</header>
+<div class="flex-1 overflow-y-auto p-4 md:p-8 space-y-6 md:space-y-8 bg-background-light dark:bg-background-dark">
+<div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6">
+<div class="flex flex-col gap-2 w-full">
+<h1 class="text-3xl md:text-4xl font-black tracking-tight text-[#111814] dark:text-white">
+                            Selamat datang kembali, Budi <span class="text-primary">👋</span>
+</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base">
+                            Siap untuk shift Anda? Zona saat ini: <span class="font-semibold text-[#111814] dark:text-white">Jakarta Utara</span>.
+                        </p>
+</div>
+<div class="flex items-center gap-4 bg-surface-light dark:bg-surface-dark p-2 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] shadow-sm shrink-0">
+<div class="flex gap-2 px-4 py-2">
+<div class="flex flex-col items-center">
+<span class="text-xl font-bold font-mono">04</span>
+<span class="text-[10px] uppercase text-gray-500 font-medium">Hrs</span>
+</div>
+<span class="text-xl font-bold text-gray-300">:</span>
+<div class="flex flex-col items-center">
+<span class="text-xl font-bold font-mono">12</span>
+<span class="text-[10px] uppercase text-gray-500 font-medium">Min</span>
+</div>
+<span class="text-xl font-bold text-gray-300">:</span>
+<div class="flex flex-col items-center">
+<span class="text-xl font-bold font-mono text-primary">30</span>
+<span class="text-[10px] uppercase text-gray-500 font-medium">Sec</span>
+</div>
+</div>
+<button class="bg-red-50 hover:bg-red-100 text-red-600 dark:bg-red-900/20 dark:text-red-400 dark:hover:bg-red-900/30 px-4 py-3 rounded-lg font-bold text-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-lg">logout</span>
+                            Selesai Tugas
+                        </button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
+<div class="bg-surface-light dark:bg-surface-dark p-5 xl:p-6 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">Pickup Selesai</p>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+<p class="text-3xl font-bold">12 <span class="text-gray-400 text-xl font-normal">/ 45</span></p>
+<p class="text-primary text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +2% dibanding kemarin
+                        </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-5 xl:p-6 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">Sampah Terkumpul</p>
+<span class="material-symbols-outlined text-primary">recycling</span>
+</div>
+<p class="text-3xl font-bold">240 <span class="text-base font-normal text-gray-500">kg</span></p>
+<p class="text-primary text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +15kg diproyeksikan
+                        </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-5 xl:p-6 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">Progres Rute</p>
+<span class="material-symbols-outlined text-primary">alt_route</span>
+</div>
+<p class="text-3xl font-bold">28%</p>
+<div class="w-full bg-gray-100 dark:bg-gray-700 h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<div class="bg-primary p-5 xl:p-6 rounded-xl shadow-lg shadow-primary/20 flex flex-col justify-between text-background-dark relative overflow-hidden group min-h-[140px]">
+<div class="absolute right-[-20px] top-[-20px] size-24 bg-white/10 rounded-full blur-2xl group-hover:bg-white/20 transition-all"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<p class="text-sm font-bold opacity-80 mb-2">Tindakan Cepat</p>
+<button class="w-full bg-background-dark text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-md">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+                                Pindai Kode QR
+                            </button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[600px]">
+<div class="lg:col-span-4 xl:col-span-3 flex flex-col gap-4">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-lg font-bold">Pickup Mendatang</h3>
+<button class="text-sm font-semibold text-primary hover:underline">Lihat Semua</button>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-5 rounded-xl border-l-4 border-primary shadow-sm ring-1 ring-black/5 dark:ring-white/5 relative overflow-hidden">
+<div class="absolute right-0 top-0 bg-primary/10 text-primary px-3 py-1 rounded-bl-lg text-xs font-bold">BERIKUTNYA</div>
+<div class="flex flex-col gap-4 items-start">
+<div class="flex items-start gap-4 w-full">
+<div class="size-14 rounded-lg bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0">
+<span class="material-symbols-outlined text-2xl">storefront</span>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-lg">Toko Maju Jaya</h4>
+<p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Jl. Merdeka No. 10 (5 menit lagi)</p>
+<div class="flex flex-wrap gap-2 mb-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800">Daur Ulang</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400 border border-orange-200 dark:border-orange-800">Volume Besar</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2 w-full pt-2 border-t border-dashed border-gray-200 dark:border-gray-700">
+<button class="flex-1 bg-primary text-background-dark py-2.5 rounded-lg text-sm font-bold flex items-center justify-center gap-1 hover:brightness-110 transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">check_circle</span> Verifikasi
+                                    </button>
+<button class="size-10 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined">navigation</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 overflow-y-auto pr-1">
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] flex items-center gap-4 opacity-80 hover:opacity-100 transition-opacity cursor-pointer hover:bg-gray-50 dark:hover:bg-[#25382e]">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">home</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-sm">Rumah Bu Siti</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Jl. Anggrek No. 4</p>
+</div>
+<span class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300">Menunggu</span>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] flex items-center gap-4 opacity-80 hover:opacity-100 transition-opacity cursor-pointer hover:bg-gray-50 dark:hover:bg-[#25382e]">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-sm">Warung Sederhana</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Jl. Melati No. 22</p>
+</div>
+<span class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300">Menunggu</span>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] flex items-center gap-4 opacity-80 hover:opacity-100 transition-opacity cursor-pointer hover:bg-gray-50 dark:hover:bg-[#25382e]">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">apartment</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-sm">Apartemen Gading</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Jl. Kelapa Dua</p>
+</div>
+<span class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300">Menunggu</span>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-4 rounded-xl border border-[#f0f4f2] dark:border-[#2a3c30] flex items-center gap-4 opacity-80 hover:opacity-100 transition-opacity cursor-pointer hover:bg-gray-50 dark:hover:bg-[#25382e]">
+<div class="size-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div class="flex-1">
+<h4 class="font-semibold text-sm">SDN 01 Pagi</h4>
+<p class="text-xs text-gray-500 dark:text-gray-400">Jl. Pendidikan No. 5</p>
+</div>
+<span class="text-xs font-medium px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded text-gray-600 dark:text-gray-300">Menunggu</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 xl:col-span-9 h-[500px] lg:h-auto rounded-xl overflow-hidden relative shadow-md group border border-[#f0f4f2] dark:border-[#2a3c30]">
+<div class="absolute inset-0 bg-gray-200 dark:bg-gray-800" data-alt="Abstract map view of city streets with green hue" data-location="Jakarta City Map" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsb6VN2FFSp-UZxWjIg-PcM5u8-fSl8olc5ShdH3B6erXu246j4_EQJo_t0T_IuqBx4FZIM_B3vTlkZZyTiDUoPzRFOspuzE3-jx-7SNMfr5OJtWpIGt2BRK1PiYdIkJmdXLgzZEskXJN80vxjc74AiFh4z7o-xSldCus2cJntnFuenRFptrl7w8S-7FEVIq9lKruTpvK_ZPHvxbp9QvAdIyZyvhaKc4v1_qeCQBELCcZ7hkdL16g6nTJvZvUIY6JmmxRCv6euKGk'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-black/10 dark:bg-black/40"></div>
+<div class="absolute top-4 left-4 bg-surface-light dark:bg-surface-dark p-2 rounded-lg shadow-lg hidden sm:flex gap-2">
+<button class="px-3 py-1.5 bg-primary text-background-dark font-bold text-xs rounded hover:brightness-110">Pelacakan Langsung</button>
+<button class="px-3 py-1.5 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 font-medium text-xs rounded">Lalu Lintas</button>
+<button class="px-3 py-1.5 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 font-medium text-xs rounded">Peta Panas</button>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="bg-white text-[#111814] px-3 py-1 rounded-full shadow-lg text-xs font-bold mb-1 animate-bounce">Anda</div>
+<div class="size-6 bg-primary rounded-full ring-4 ring-white dark:ring-gray-800 shadow-xl relative cursor-pointer hover:scale-110 transition-transform">
+<div class="absolute inset-0 bg-primary rounded-full animate-ping opacity-75"></div>
+</div>
+</div>
+<div class="absolute top-[40%] left-[60%] flex flex-col items-center group/marker cursor-pointer">
+<div class="bg-white text-[#111814] px-2 py-0.5 rounded shadow text-[10px] font-bold mb-1 opacity-0 group-hover/marker:opacity-100 transition-opacity">Toko Maju</div>
+<span class="material-symbols-outlined text-red-500 text-4xl drop-shadow-md hover:-translate-y-1 transition-transform">location_on</span>
+</div>
+<div class="absolute bottom-[30%] left-[30%] opacity-80 cursor-pointer hover:opacity-100">
+<span class="material-symbols-outlined text-gray-600 text-4xl drop-shadow-md">location_on</span>
+</div>
+<div class="absolute top-[25%] left-[45%] opacity-80 cursor-pointer hover:opacity-100">
+<span class="material-symbols-outlined text-gray-600 text-4xl drop-shadow-md">location_on</span>
+</div>
+<div class="absolute right-6 bottom-6 flex flex-col gap-3">
+<button class="bg-white dark:bg-surface-dark size-12 rounded-xl shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#25382e] transition-all hover:scale-105">
+<span class="material-symbols-outlined text-xl">my_location</span>
+</button>
+<div class="flex flex-col rounded-xl shadow-lg overflow-hidden bg-white dark:bg-surface-dark">
+<button class="size-12 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#25382e] border-b border-gray-100 dark:border-gray-700">
+<span class="material-symbols-outlined text-xl">add</span>
+</button>
+<button class="size-12 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-[#25382e]">
+<span class="material-symbols-outlined text-xl">remove</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
