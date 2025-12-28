@@ -1,5 +1,4 @@
-import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
-import { authApi } from '../lib/api';
+import { createContext, useContext, useState, type ReactNode } from 'react';
 
 interface User {
     id: string;
@@ -20,63 +19,31 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+// Demo user for frontend-only deployment
+const DEMO_USER: User = {
+    id: 'demo-admin-001',
+    email: 'admin@simbiosis.id',
+    name: 'Admin Demo',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCB9YUBbNxnc2MHj4dUntODkLBSP7MOlJf6T414YdhCwIzhiM_S05eLtaabsN2aNPgxoVHX8loyMigrqCocBgplRXOUGDHxVfci7yfooKF7fpUfvNVBZIHEiyruJ8leWc2bYJ1IjJwM93ofUOcFEyNcs8YszBLg9xvj2e9mOShuO2MmtHTc6BEP6D0UUpA1a-3rU_x5dAfVBvzFfs8awiYs2jP4F1t0OhNteoKz4RapNS9jjywdAnTHyaCHEDv4tMb_1onIPYUml9c',
+    role: 'admin',
+};
+
 export function AuthProvider({ children }: { children: ReactNode }) {
-    const [user, setUser] = useState<User | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    // Demo mode: always authenticated with demo user
+    const [user] = useState<User | null>(DEMO_USER);
+    const [isLoading] = useState(false);
 
     const refreshUser = async () => {
-        try {
-            const session = await authApi.getSession();
-            if (session?.user) {
-                // Verify user has admin role
-                if (session.user.role === 'admin') {
-                    setUser(session.user);
-                } else {
-                    setUser(null);
-                }
-            } else {
-                setUser(null);
-            }
-        } catch {
-            setUser(null);
-        }
+        // Demo mode: no-op
     };
 
-    useEffect(() => {
-        const init = async () => {
-            await refreshUser();
-            setIsLoading(false);
-        };
-        init();
-    }, []);
-
-    const signIn = async (email: string, password: string) => {
-        try {
-            const result = await authApi.signIn(email, password);
-            if (result.error) {
-                return { success: false, error: result.error.message || 'Login gagal' };
-            }
-
-            // Refresh user and check role
-            await refreshUser();
-
-            // Check if user has admin role after refresh
-            const session = await authApi.getSession();
-            if (session?.user?.role !== 'admin') {
-                await authApi.signOut();
-                setUser(null);
-                return { success: false, error: 'Akses ditolak. Hanya admin yang dapat masuk.' };
-            }
-
-            return { success: true };
-        } catch (error: any) {
-            return { success: false, error: error.message || 'Login gagal' };
-        }
+    const signIn = async (_email: string, _password: string) => {
+        // Demo mode: always succeed
+        return { success: true };
     };
 
     const signOut = async () => {
-        await authApi.signOut();
-        setUser(null);
+        // Demo mode: no-op, stay logged in
     };
 
     return (
@@ -84,7 +51,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             value={{
                 user,
                 isLoading,
-                isAuthenticated: !!user,
+                isAuthenticated: true, // Always authenticated in demo mode
                 signIn,
                 signOut,
                 refreshUser,
@@ -102,3 +69,4 @@ export function useAuth() {
     }
     return context;
 }
+
