@@ -94,6 +94,10 @@ function Dashboard() {
                     <h2 className="text-lg font-bold text-text-muted hidden sm:block">Admin</h2>
                 </div>
                 <div className="flex items-center flex-1 justify-end gap-4 sm:gap-6">
+                    <a href="https://simbiosis-web-portal.vercel.app" className="hidden sm:flex items-center gap-2 text-sm font-bold text-text-muted hover:text-primary transition-colors">
+                        <span className="material-symbols-outlined">grid_view</span>
+                        Portal
+                    </a>
                     <div className="hidden md:flex w-full max-w-md items-center h-12 rounded-xl bg-gray-800 border border-transparent focus-within:border-primary px-4 transition-all focus-within:ring-1 focus-within:ring-primary">
                         <span className="material-symbols-outlined text-text-muted">search</span>
                         <input className="bg-transparent border-none text-sm w-full focus:ring-0 text-text-main dark:text-white placeholder-text-muted outline-none ml-2" placeholder="Cari audit, pengguna..." type="text" />
