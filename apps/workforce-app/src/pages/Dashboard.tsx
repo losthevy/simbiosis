@@ -145,6 +145,13 @@ function Dashboard() {
                             <span className="hidden sm:inline">Mulai Rute</span>
                         </button>
                         <button
+                            onClick={() => navigate('/cost-efficiency')}
+                            className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-green-500/10 text-green-600 dark:text-green-400 font-bold text-sm hover:bg-green-500/20 transition-colors"
+                        >
+                            <span className="material-symbols-outlined text-lg">analytics</span>
+                            <span className="hidden sm:inline">Analisis Biaya</span>
+                        </button>
+                        <button
                             onClick={handleNotifClick}
                             className="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300 transition-colors relative"
                         >
