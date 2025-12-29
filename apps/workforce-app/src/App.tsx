@@ -7,6 +7,7 @@ import TrafficDetail from './pages/TrafficDetail';
 import HeatmapDetail from './pages/HeatmapDetail';
 import NavigationDetail from './pages/NavigationDetail';
 import SimbiAI from './pages/SimbiAI';
+import SimbiChat from './pages/SimbiChat';
 
 function AppRoutes() {
   // Demo mode: bypass authentication for frontend-only deployment
@@ -20,6 +21,7 @@ function AppRoutes() {
       <Route path="/heatmap" element={<HeatmapDetail />} />
       <Route path="/navigation" element={<NavigationDetail />} />
       <Route path="/simbi-ai" element={<SimbiAI />} />
+      <Route path="/chat-ai" element={<SimbiChat />} />
     </Routes>
   );
 }
