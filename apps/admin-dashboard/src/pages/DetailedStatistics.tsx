@@ -265,11 +265,11 @@ function DetailedStatistics() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="h-64 flex items-end justify-between gap-6 px-4">
+                            <div className="h-64 flex items-end justify-between gap-2 sm:gap-6 px-1 sm:px-4">
                                 {[{ l: 'Q1', v1: 40, v2: 20 }, { l: 'Q2', v1: 60, v2: 25 }, { l: 'Q3', v1: 80, v2: 30 }, { l: 'Q4', v1: 100, v2: 40 }].map((d, i) => (
-                                    <div key={i} className="flex-1 flex gap-2 h-full items-end justify-center group">
-                                        <div className="w-8 bg-gray-300 dark:bg-gray-600 rounded-t-sm transition-all hover:bg-gray-400" style={{ height: `${d.v1}%` }}></div>
-                                        <div className="w-8 bg-green-500 rounded-t-sm transition-all hover:bg-green-400" style={{ height: `${d.v2}%` }}></div>
+                                    <div key={i} className="flex-1 flex gap-1 sm:gap-2 h-full items-end justify-center group">
+                                        <div className="w-4 sm:w-8 bg-gray-300 dark:bg-gray-600 rounded-t-sm transition-all hover:bg-gray-400" style={{ height: `${d.v1}%` }}></div>
+                                        <div className="w-4 sm:w-8 bg-green-500 rounded-t-sm transition-all hover:bg-green-400" style={{ height: `${d.v2}%` }}></div>
                                     </div>
                                 ))}
                             </div>

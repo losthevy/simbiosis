@@ -85,10 +85,10 @@ function Dashboard() {
             )}
 
             <header className="flex items-center justify-between h-20 px-6 lg:px-10 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 flex-shrink-0 z-10">
-                <div className="flex items-center gap-6">
-                    <h1 className="text-text-main dark:text-white text-2xl font-black tracking-tight flex items-center gap-2">
-                        <span className="material-symbols-outlined text-primary text-4xl">recycling</span>
-                        SIMBIOSIS
+                <div className="flex items-center gap-3 sm:gap-6">
+                    <h1 className="text-text-main dark:text-white text-xl sm:text-2xl font-black tracking-tight flex items-center gap-2">
+                        <span className="material-symbols-outlined text-primary text-3xl sm:text-4xl">recycling</span>
+                        <span className="hidden sm:inline">SIMBIOSIS</span>
                     </h1>
                     <div className="h-8 w-px bg-gray-200 dark:bg-gray-700 hidden sm:block"></div>
                     <h2 className="text-lg font-bold text-text-muted hidden sm:block">Admin</h2>
@@ -135,31 +135,31 @@ function Dashboard() {
                             <span className="material-symbols-outlined align-bottom text-lg mr-1">calendar_today</span>
                             <span>Hari ini, <span className="text-text-main dark:text-white font-semibold">24 Oktober 2025</span></span>
                         </div>
-                        <div className="flex gap-3">
+                        <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar w-full sm:w-auto">
                             <button
                                 onClick={() => navigate('/detailed-statistics')}
-                                className="flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm"
+                                className="flex-none flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm whitespace-nowrap"
                             >
                                 <span className="material-symbols-outlined text-[20px]">visibility</span>
                                 Rincian Lengkap
                             </button>
                             <button
                                 onClick={() => navigate('/report-access')}
-                                className="flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm"
+                                className="flex-none flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm whitespace-nowrap"
                             >
                                 <span className="material-symbols-outlined text-[20px]">folder_open</span>
                                 Akses Laporan
                             </button>
                             <button
                                 onClick={() => navigate('/new-audit')}
-                                className="flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm"
+                                className="flex-none flex items-center gap-2 px-4 py-2 bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-semibold hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-text-main dark:text-white shadow-sm whitespace-nowrap"
                             >
                                 <span className="material-symbols-outlined text-[20px]">add_task</span>
                                 Audit Baru
                             </button>
                             <button
                                 onClick={() => navigate('/create-report')}
-                                className="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-dark text-black rounded-lg text-sm font-bold transition-colors shadow-sm shadow-primary/20"
+                                className="flex-none flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-dark text-black rounded-lg text-sm font-bold transition-colors shadow-sm shadow-primary/20 whitespace-nowrap"
                             >
                                 <span className="material-symbols-outlined text-[20px]">description</span>
                                 Buat Laporan
@@ -284,8 +284,8 @@ function Dashboard() {
                                 </thead>
                                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700/50">
                                     <tr className="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
-                                        <td className="px-6 py-4 font-medium text-text-main dark:text-white">#COL-2940</td>
-                                        <td className="px-6 py-4 text-text-muted flex items-center gap-2">
+                                        <td className="px-3 md:px-6 py-4 font-medium text-text-main dark:text-white">#COL-2940</td>
+                                        <td className="px-3 md:px-6 py-4 text-text-muted flex items-center gap-2">
                                             <div
                                                 className="h-6 w-6 rounded bg-cover bg-center"
                                                 data-alt="Map thumbnail of Jakarta location"
