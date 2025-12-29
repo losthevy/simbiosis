@@ -510,6 +510,21 @@ function Dashboard() {
                         </div>
                     </div>
                 </main>
+
+                {/* Floating Action Button for AI Chat */}
+                <button
+                    onClick={() => navigate('/chat-ai')}
+                    className="fixed bottom-24 right-6 w-14 h-14 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-2xl shadow-black/30 flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 z-50 group border-2 border-primary"
+                    aria-label="Chat dengan AI"
+                >
+                    <div className="absolute inset-0 bg-primary/20 rounded-full animate-ping opacity-75 group-hover:opacity-100"></div>
+                    <span className="material-symbols-outlined text-3xl relative z-10 text-primary group-hover:text-primary-light">smart_toy</span>
+
+                    {/* Tooltip */}
+                    <div className="absolute right-full mr-4 bg-black/80 dark:bg-white/90 text-white dark:text-black text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none transform translate-x-2 group-hover:translate-x-0">
+                        Tanya Simbi AI
+                    </div>
+                </button>
             </div>
         </div>
     );
