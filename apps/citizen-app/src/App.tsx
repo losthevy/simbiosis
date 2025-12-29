@@ -21,6 +21,7 @@ import NewsDetail from './pages/NewsDetail';
 import BankSampahAccess from './pages/BankSampahAccess';
 import BankSampahSchedule from './pages/BankSampahSchedule';
 import MyChallenges from './pages/MyChallenges';
+import SimbiAI from './pages/SimbiAI';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
           <Route path="/bank-sampah" element={<BankSampahAccess />} />
           <Route path="/bank-sampah-schedule" element={<BankSampahSchedule />} />
           <Route path="/my-challenges" element={<MyChallenges />} />
+          <Route path="/simbi-ai" element={<SimbiAI />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

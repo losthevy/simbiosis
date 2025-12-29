@@ -6,6 +6,7 @@ import AllCollections from './pages/AllCollections';
 import NewAudit from './pages/NewAudit';
 import DetailedStatistics from './pages/DetailedStatistics';
 import ReportAccess from './pages/ReportAccess';
+import SimbiAI from './pages/SimbiAI';
 
 function AppRoutes() {
   // Demo mode: bypass authentication for frontend-only deployment
@@ -18,6 +19,7 @@ function AppRoutes() {
       <Route path="/new-audit" element={<NewAudit />} />
       <Route path="/detailed-statistics" element={<DetailedStatistics />} />
       <Route path="/report-access" element={<ReportAccess />} />
+      <Route path="/simbi-ai" element={<SimbiAI />} />
     </Routes>
   );
 }

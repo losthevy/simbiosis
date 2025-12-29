@@ -131,6 +131,13 @@ function Dashboard() {
                             <span className="hidden sm:inline">Portal</span>
                         </a>
                         <button
+                            onClick={() => navigate('/simbi-ai')}
+                            className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-500/20 transition-colors"
+                        >
+                            <span className="material-symbols-outlined text-lg">smart_toy</span>
+                            <span className="hidden sm:inline">Simbi AI</span>
+                        </button>
+                        <button
                             onClick={handleNotifClick}
                             className="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300 transition-colors relative"
                         >

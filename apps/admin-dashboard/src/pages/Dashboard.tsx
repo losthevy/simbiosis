@@ -98,6 +98,13 @@ function Dashboard() {
                         <span className="material-symbols-outlined text-lg">grid_view</span>
                         <span className="hidden sm:inline">Portal</span>
                     </a>
+                    <button
+                        onClick={() => navigate('/simbi-ai')}
+                        className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold text-sm hover:bg-blue-500/20 transition-colors"
+                    >
+                        <span className="material-symbols-outlined text-lg">smart_toy</span>
+                        <span className="hidden sm:inline">Simbi AI</span>
+                    </button>
                     <div className="hidden md:flex w-full max-w-md items-center h-12 rounded-xl bg-gray-800 border border-transparent focus-within:border-primary px-4 transition-all focus-within:ring-1 focus-within:ring-primary">
                         <span className="material-symbols-outlined text-text-muted">search</span>
                         <input className="bg-transparent border-none text-sm w-full focus:ring-0 text-text-main dark:text-white placeholder-text-muted outline-none ml-2" placeholder="Cari audit, pengguna..." type="text" />
