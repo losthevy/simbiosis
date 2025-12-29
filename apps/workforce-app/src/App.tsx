@@ -9,6 +9,7 @@ import NavigationDetail from './pages/NavigationDetail';
 import SimbiAI from './pages/SimbiAI';
 import SimbiChat from './pages/SimbiChat';
 
+import WasteCollection from './pages/WasteCollection';
 import CostEfficiency from './pages/CostEfficiency';
 
 function AppRoutes() {
