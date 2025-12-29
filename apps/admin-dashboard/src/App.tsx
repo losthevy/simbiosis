@@ -9,6 +9,8 @@ import ReportAccess from './pages/ReportAccess';
 import SimbiAI from './pages/SimbiAI';
 import SimbiChat from './pages/SimbiChat';
 
+import GeoAnalysis from './pages/GeoAnalysis';
+
 function AppRoutes() {
   // Demo mode: bypass authentication for frontend-only deployment
   return (
@@ -22,6 +24,7 @@ function AppRoutes() {
       <Route path="/report-access" element={<ReportAccess />} />
       <Route path="/simbi-ai" element={<SimbiAI />} />
       <Route path="/chat-ai" element={<SimbiChat />} />
+      <Route path="/geo-analysis" element={<GeoAnalysis />} />
     </Routes>
   );
 }

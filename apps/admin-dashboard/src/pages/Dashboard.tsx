@@ -105,6 +105,13 @@ function Dashboard() {
                         <span className="material-symbols-outlined text-lg">smart_toy</span>
                         <span className="hidden sm:inline">Simbi AI</span>
                     </button>
+                    <button
+                        onClick={() => navigate('/geo-analysis')}
+                        className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-purple-500/10 text-purple-600 dark:text-purple-400 font-bold text-sm hover:bg-purple-500/20 transition-colors"
+                    >
+                        <span className="material-symbols-outlined text-lg">public</span>
+                        <span className="hidden sm:inline">Geo Analisis</span>
+                    </button>
                     <div className="hidden md:flex w-full max-w-md items-center h-12 rounded-xl bg-gray-800 border border-transparent focus-within:border-primary px-4 transition-all focus-within:ring-1 focus-within:ring-primary">
                         <span className="material-symbols-outlined text-text-muted">search</span>
                         <input className="bg-transparent border-none text-sm w-full focus:ring-0 text-text-main dark:text-white placeholder-text-muted outline-none ml-2" placeholder="Cari audit, pengguna..." type="text" />
