@@ -115,7 +115,7 @@ function WasteCollection() {
                             {/* Connector Line */}
                             <div className="absolute left-[19px] top-6 bottom-6 w-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>
 
-                            {stops.map((stop, index) => (
+                            {stops.map((stop) => (
                                 <div key={stop.id} className={`flex items-start gap-4 p-4 rounded-xl border transition-all ${stop.completed ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800' : 'bg-white dark:bg-surface-dark border-gray-200 dark:border-gray-700'}`}>
                                     <div className={`h-10 w-10 rounded-full flex items-center justify-center shrink-0 border-2 ${stop.completed ? 'bg-green-500 border-green-500 text-white' : 'bg-white dark:bg-surface-dark border-gray-300 dark:border-gray-600 text-gray-400'}`}>
                                         <span className="material-symbols-outlined">{stop.completed ? 'check' : 'location_on'}</span>
