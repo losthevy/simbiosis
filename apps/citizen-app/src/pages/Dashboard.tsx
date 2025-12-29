@@ -98,7 +98,7 @@ function Dashboard() {
                     <div className="flex items-center gap-6">
                         <h1 className="text-text-main dark:text-white text-2xl font-black tracking-tight flex items-center gap-2">
                             <span className="material-symbols-outlined text-primary text-4xl">recycling</span>
-                            SIMBIOSIS
+                            <span className="hidden sm:inline">SIMBIOSIS</span>
                         </h1>
                         <div className="h-8 w-px bg-border-light dark:bg-border-dark hidden sm:block"></div>
                         <h2 className="text-lg font-bold text-text-muted hidden sm:block">Pengguna</h2>

@@ -170,17 +170,18 @@ function AllCollections() {
                                 <button
                                     onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                                     disabled={currentPage === 1}
-                                    className="px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-text-muted hover:bg-gray-50 dark:hover:bg-white/5 disabled:opacity-50 transition-colors"
+                                    className="px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-text-muted hover:bg-gray-50 dark:hover:bg-white/5 disabled:opacity-50 transition-colors flex items-center gap-1"
                                 >
-                                    Sebelumnya
+                                    <span className="hidden sm:inline">Sebelumnya</span>
+                                    <span className="sm:hidden material-symbols-outlined text-lg">chevron_left</span>
                                 </button>
                                 {[1, 2, 3].map(page => (
                                     <button
                                         key={page}
                                         onClick={() => setCurrentPage(page)}
                                         className={`h-9 w-9 rounded-lg flex items-center justify-center text-sm transition-colors ${currentPage === page
-                                                ? 'bg-primary text-black font-bold shadow-sm shadow-primary/20'
-                                                : 'border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/5 text-text-muted'
+                                            ? 'bg-primary text-black font-bold shadow-sm shadow-primary/20'
+                                            : 'border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/5 text-text-muted'
                                             }`}
                                     >
                                         {page}
@@ -190,8 +191,8 @@ function AllCollections() {
                                 <button
                                     onClick={() => setCurrentPage(10)}
                                     className={`h-9 w-9 rounded-lg flex items-center justify-center text-sm transition-colors ${currentPage === 10
-                                            ? 'bg-primary text-black font-bold shadow-sm shadow-primary/20'
-                                            : 'border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/5 text-text-muted'
+                                        ? 'bg-primary text-black font-bold shadow-sm shadow-primary/20'
+                                        : 'border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-white/5 text-text-muted'
                                         }`}
                                 >
                                     10
@@ -199,9 +200,10 @@ function AllCollections() {
                                 <button
                                     onClick={() => setCurrentPage(p => Math.min(10, p + 1))}
                                     disabled={currentPage === 10}
-                                    className="px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-text-muted hover:bg-gray-50 dark:hover:bg-white/5 disabled:opacity-50 transition-colors"
+                                    className="px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium text-text-muted hover:bg-gray-50 dark:hover:bg-white/5 disabled:opacity-50 transition-colors flex items-center gap-1"
                                 >
-                                    Berikutnya
+                                    <span className="hidden sm:inline">Berikutnya</span>
+                                    <span className="sm:hidden material-symbols-outlined text-lg">chevron_right</span>
                                 </button>
                             </div>
                         </div>

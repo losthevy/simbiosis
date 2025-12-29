@@ -120,7 +120,7 @@ function Dashboard() {
                     <div className="flex items-center gap-6">
                         <h1 className="text-[#111814] dark:text-white text-2xl font-black tracking-tight flex items-center gap-2">
                             <span className="material-symbols-outlined text-primary text-4xl">recycling</span>
-                            SIMBIOSIS
+                            <span className="hidden sm:inline">SIMBIOSIS</span>
                         </h1>
                         <div className="h-8 w-px bg-gray-200 dark:bg-gray-700 hidden sm:block"></div>
                         <h2 className="text-lg font-bold text-gray-500 dark:text-gray-400 hidden sm:block">Petugas</h2>
