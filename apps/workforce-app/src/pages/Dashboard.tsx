@@ -138,6 +138,13 @@ function Dashboard() {
                             <span className="hidden sm:inline">Simbi AI</span>
                         </button>
                         <button
+                            onClick={() => navigate('/waste-collection')}
+                            className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 font-bold text-sm hover:bg-orange-500/20 transition-colors"
+                        >
+                            <span className="material-symbols-outlined text-lg">local_shipping</span>
+                            <span className="hidden sm:inline">Mulai Rute</span>
+                        </button>
+                        <button
                             onClick={handleNotifClick}
                             className="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-[#25382e] text-gray-600 dark:text-gray-300 transition-colors relative"
                         >

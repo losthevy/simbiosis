@@ -9,6 +9,8 @@ import NavigationDetail from './pages/NavigationDetail';
 import SimbiAI from './pages/SimbiAI';
 import SimbiChat from './pages/SimbiChat';
 
+import WasteCollection from './pages/WasteCollection';
+
 function AppRoutes() {
   // Demo mode: bypass authentication for frontend-only deployment
   return (
@@ -22,6 +24,7 @@ function AppRoutes() {
       <Route path="/navigation" element={<NavigationDetail />} />
       <Route path="/simbi-ai" element={<SimbiAI />} />
       <Route path="/chat-ai" element={<SimbiChat />} />
+      <Route path="/waste-collection" element={<WasteCollection />} />
     </Routes>
   );
 }
